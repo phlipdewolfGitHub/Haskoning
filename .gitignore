@@ -1,0 +1,31 @@
+# Ignore all PDF research papers and documents in root
+*.pdf
+*.docx
+*.pptx
+*.html
+
+# But track everything in Network Scheduling folder
+!Network Scheduling/
+
+# Common Python ignores (for when you add Python code)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
