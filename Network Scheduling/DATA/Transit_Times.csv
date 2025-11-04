@@ -1,0 +1,303 @@
+﻿Trade,Port from,Port to,-
+EUAF,Antwerp,Antwerp,0
+EUAF,Antwerp,Auckland,70
+EUAF,Antwerp,Baltimore,50
+EUAF,Antwerp,Brisbane,70
+EUAF,Antwerp,Durban,70
+EUAF,Antwerp,Fremantle,70
+EUAF,Antwerp,Jacksonville,70
+EUAF,Antwerp,Melbourne,70
+EUAF,Antwerp,Port Kembla,70
+EUAF,Antwerp,Port Louis,70
+EUAF,Antwerp,Port Reunion,70
+EUAF,Antwerp,Tamatave,70
+EUAF,Baltimore,Antwerp,0
+EUAF,Baltimore,Auckland,70
+EUAF,Baltimore,Brisbane,70
+EUAF,Baltimore,Jacksonville,70
+EUAF,Baltimore,Melbourne,70
+EUAF,Baltimore,Port Kembla,70
+EUAF,Bremerhaven,Antwerp,0
+EUAF,Bremerhaven,Auckland,70
+EUAF,Bremerhaven,Brisbane,70
+EUAF,Bremerhaven,Durban,70
+EUAF,Bremerhaven,Fremantle,70
+EUAF,Bremerhaven,Jacksonville,70
+EUAF,Bremerhaven,Melbourne,70
+EUAF,Bremerhaven,Noumea,70
+EUAF,Bremerhaven,Port Elizabeth,70
+EUAF,Bremerhaven,Port Kembla,70
+EUAF,Bremerhaven,Port Louis,70
+EUAF,Bremerhaven,Port Reunion,70
+EUAF,Bremerhaven,Tamatave,70
+EUAF,Durban,Antwerp,0
+EUAF,Durban,Auckland,40
+EUAF,Durban,Brisbane,40
+EUAF,Durban,Fremantle,40
+EUAF,Durban,Jacksonville,70
+EUAF,Durban,Melbourne,40
+EUAF,Durban,Port Kembla,40
+EUAF,Gothenburg,Antwerp,15
+EUAF,Gothenburg,Auckland,70
+EUAF,Gothenburg,Brisbane,70
+EUAF,Gothenburg,Durban,70
+EUAF,Gothenburg,Fremantle,70
+EUAF,Gothenburg,Jacksonville,70
+EUAF,Gothenburg,Melbourne,70
+EUAF,Gothenburg,Port Elizabeth,70
+EUAF,Gothenburg,Port Kembla,70
+EUAF,Gothenburg,Port Louis,70
+EUAF,Gothenburg,Port Reunion,70
+EUAF,Gothenburg,Tamatave,70
+EUAF,Jacksonville,Antwerp,0
+EUAF,Jacksonville,Auckland,70
+EUAF,Jacksonville,Brisbane,70
+EUAF,Jacksonville,Jacksonville,70
+EUAF,Jacksonville,Melbourne,70
+EUAF,Jacksonville,Port Kembla,70
+EUAF,Kingston (Jam),Antwerp,0
+EUAF,Kingston (Jam),Jacksonville,0
+EUAF,Le Havre,Antwerp,0
+EUAF,Le Havre,Auckland,70
+EUAF,Le Havre,Brisbane,70
+EUAF,Le Havre,Durban,70
+EUAF,Le Havre,Fremantle,70
+EUAF,Le Havre,Jacksonville,70
+EUAF,Le Havre,Melbourne,70
+EUAF,Le Havre,Noumea,70
+EUAF,Le Havre,Port Kembla,70
+EUAF,Le Havre,Port Louis,70
+EUAF,Le Havre,Port Reunion,70
+EUAF,Le Havre,Tamatave,70
+EUAF,Newcastle,Antwerp,15
+EUAF,Newcastle,Auckland,70
+EUAF,Newcastle,Brisbane,70
+EUAF,Newcastle,Durban,70
+EUAF,Newcastle,Fremantle,70
+EUAF,Newcastle,Jacksonville,70
+EUAF,Newcastle,Melbourne,70
+EUAF,Newcastle,Noumea,70
+EUAF,Newcastle,Port Kembla,70
+EUAF,Newcastle,Port Louis,70
+EUAF,Newcastle,Port Reunion,70
+EUAF,Newcastle,Tamatave,70
+EUAF,Port Elizabeth,Antwerp,0
+EUAF,Port Elizabeth,Auckland,40
+EUAF,Port Elizabeth,Brisbane,40
+EUAF,Port Elizabeth,Fremantle,40
+EUAF,Port Elizabeth,Jacksonville,70
+EUAF,Port Elizabeth,Melbourne,40
+EUAF,Port Elizabeth,Noumea,45
+EUAF,Port Elizabeth,Port Kembla,40
+EUAF,Port Elizabeth,Port Louis,20
+EUAF,Santander,Antwerp,0
+EUAF,Santander,Auckland,70
+EUAF,Santander,Brisbane,70
+EUAF,Santander,Durban,70
+EUAF,Santander,Fremantle,70
+EUAF,Santander,Jacksonville,70
+EUAF,Santander,Melbourne,70
+EUAF,Santander,Noumea,70
+EUAF,Santander,Port Elizabeth,70
+EUAF,Santander,Port Kembla,70
+EUAF,Santander,Port Louis,70
+EUAF,Santander,Port Reunion,70
+EUAF,Santander,Tamatave,70
+EUAF,Southampton,Antwerp,0
+EUAF,Southampton,Auckland,70
+EUAF,Southampton,Brisbane,70
+EUAF,Southampton,Durban,70
+EUAF,Southampton,Fremantle,70
+EUAF,Southampton,Jacksonville,70
+EUAF,Southampton,Melbourne,70
+EUAF,Southampton,Port Kembla,70
+EUAF,Southampton,Port Louis,70
+EUAF,Southampton,Port Reunion,70
+EUAF,Southampton,Tamatave,70
+EUAF,Tangier,Antwerp,0
+EUAF,Tangier,Auckland,70
+EUAF,Tangier,Brisbane,70
+EUAF,Tangier,Durban,70
+EUAF,Tangier,Fremantle,70
+EUAF,Tangier,Jacksonville,70
+EUAF,Tangier,Melbourne,70
+EUAF,Tangier,Noumea,70
+EUAF,Tangier,Port Kembla,70
+EUAF,Tangier,Port Louis,70
+EUAF,Tangier,Port Reunion,70
+EUAF,Tangier,Tamatave,70
+EUME,Antwerp,Abu Dhabi,80
+EUME,Antwerp,Antwerp,0
+EUME,Antwerp,Bahrain,80
+EUME,Antwerp,Dammam,80
+EUME,Antwerp,Hamad Port,80
+EUME,Antwerp,Jebel Ali,80
+EUME,Antwerp,Kuwait,80
+EUME,Antwerp,Sohar,80
+EUME,Bremerhaven,Abu Dhabi,80
+EUME,Bremerhaven,Antwerp,0
+EUME,Bremerhaven,Bahrain,80
+EUME,Bremerhaven,Dammam,80
+EUME,Bremerhaven,Hamad Port,80
+EUME,Bremerhaven,Jebel Ali,80
+EUME,Bremerhaven,Kuwait,80
+EUME,Bremerhaven,Sohar,80
+EUME,Gothenburg,Antwerp,15
+EUME,Gothenburg,Bahrain,80
+EUME,Gothenburg,Dammam,80
+EUME,Gothenburg,Hamad Port,80
+EUME,Gothenburg,Jebel Ali,80
+EUME,Gothenburg,Kuwait,80
+EUME,Hamburg,Abu Dhabi,80
+EUME,Hamburg,Antwerp,0
+EUME,Hamburg,Bahrain,80
+EUME,Hamburg,Dammam,80
+EUME,Hamburg,Hamad Port,80
+EUME,Hamburg,Jebel Ali,80
+EUME,Hamburg,Kuwait,80
+EUME,Hamburg,Sohar,80
+EUME,Southampton,Abu Dhabi,80
+EUME,Southampton,Antwerp,0
+EUME,Southampton,Bahrain,80
+EUME,Southampton,Dammam,80
+EUME,Southampton,Hamad Port,80
+EUME,Southampton,Jebel Ali,80
+EUME,Southampton,Kuwait,80
+EUME,Southampton,Sohar,80
+FEEU,Hitachinaka,Amsterdam,80
+FEEU,Hitachinaka,Newcastle,80
+FEEU,Kobe,Amsterdam,80
+FEEU,Kobe,Larnaca,80
+FEEU,Kobe,Newcastle,80
+FEEU,Kobe,Valletta,80
+FEEU,Omaezaki,Bremerhaven,80
+FEEU,Omaezaki,Livorno,80
+FEEU,Omaezaki,Piraeus,80
+FEEU,Omaezaki,Zeebrugge,80
+FEEU,Taicang,Barcelona,80
+FEEU,Taicang,Bristol,80
+FEEU,Taicang,Djen-Djen,80
+FEEU,Taicang,Le Havre,80
+FEEU,Taicang,Livorno,80
+FEEU,Taicang,Piraeus,80
+FEEU,Taicang,Zeebrugge,80
+FEEU,Yokohama,Larnaca,80
+FEEU,Yokohama,Valletta,80
+FEUS,Gamagori,Baltimore,55
+FEUS,Gamagori,"Freeport, Tx",50
+FEUS,Gamagori,Jacksonville,50
+FEUS,Hiroshima,Baltimore,55
+FEUS,Hiroshima,"Freeport, Tx",50
+FEUS,Hiroshima,Jacksonville,50
+FEUS,Incheon,Baltimore,55
+FEUS,Incheon,Brunswick,50
+FEUS,Incheon,"Freeport, Tx",50
+FEUS,Incheon,Jacksonville,50
+FEUS,Incheon,New York,60
+FEUS,Kawasaki,Baltimore,55
+FEUS,Kawasaki,Brunswick,50
+FEUS,Kawasaki,"Freeport, Tx",50
+FEUS,Kawasaki,Kingston (Jam),50
+FEUS,Kingston (Jam),Baltimore,30
+FEUS,Kingston (Jam),Brunswick,30
+FEUS,Kingston (Jam),"Freeport, Tx",30
+FEUS,Kingston (Jam),Jacksonville,30
+FEUS,Kingston (Jam),Kingston (Jam),0
+FEUS,Kingston (Jam),Mobile,30
+FEUS,Kingston (Jam),New York,30
+FEUS,Kobe,Baltimore,55
+FEUS,Kobe,"Freeport, Tx",50
+FEUS,Kobe,Jacksonville,50
+FEUS,Kobe,Kingston (Jam),50
+FEUS,Masan,Baltimore,55
+FEUS,Masan,Brunswick,50
+FEUS,Masan,"Freeport, Tx",50
+FEUS,Masan,Jacksonville,50
+FEUS,Masan,Kingston (Jam),50
+FEUS,Masan,New York,60
+FEUS,Mizushima,Baltimore,50
+FEUS,Mizushima,Brunswick,50
+FEUS,Mizushima,"Freeport, Tx",50
+FEUS,Mizushima,Jacksonville,50
+FEUS,Mizushima,Kingston (Jam),50
+FEUS,Mizushima,Mobile,50
+FEUS,Mizushima,New York,50
+FEUS,Nagoya,Baltimore,55
+FEUS,Nagoya,"Freeport, Tx",50
+FEUS,Nagoya,Jacksonville,50
+FEUS,Nagoya,Kingston (Jam),50
+FEUS,Taicang,Baltimore,55
+FEUS,Taicang,"Freeport, Tx",50
+FEUS,Taicang,Jacksonville,50
+FEUS,Taicang,Kingston (Jam),50
+FEUS,Taicang,Mobile,70
+MIAF,Durban,Kingston (Jam),70
+MIAF,Durban,Veracruz,70
+MIAF,Ennore,Kingston (Jam),70
+MIAF,Ennore,Veracruz,70
+MIAF,Kuwait,Jacksonville,70
+MIAF,Kuwait,Port Arthur,70
+MIAF,Mumbai,Veracruz,70
+MIAF,Pipavav (Victor) Port,Durban,70
+MIAF,Pipavav (Victor) Port,Kingston (Jam),70
+MIAF,Pipavav (Victor) Port,Veracruz,70
+USME,Altamira,Abu Dhabi,70
+USME,Altamira,Bahrain,70
+USME,Altamira,Dammam,70
+USME,Altamira,Hamad Port,70
+USME,Altamira,Jebel Ali,70
+USME,Altamira,Kuwait,70
+USME,Altamira,Kuwait (Shuaiba),70
+USME,Altamira,Sohar,70
+USME,Brunswick,Abu Dhabi,70
+USME,Brunswick,Bahrain,70
+USME,Brunswick,Dammam,70
+USME,Brunswick,Hamad Port,70
+USME,Brunswick,Jebel Ali,70
+USME,Brunswick,Kuwait,70
+USME,Brunswick,Kuwait (Shuaiba),70
+USME,Brunswick,Sohar,70
+USME,"Charleston, SC",Abu Dhabi,70
+USME,"Charleston, SC",Bahrain,70
+USME,"Charleston, SC",Kuwait,70
+USME,"Charleston, SC",Kuwait (Shuaiba),70
+USME,"Freeport, Tx",Abu Dhabi,70
+USME,"Freeport, Tx",Bahrain,70
+USME,"Freeport, Tx",Dammam,70
+USME,"Freeport, Tx",Hamad Port,70
+USME,"Freeport, Tx",Jebel Ali,70
+USME,"Freeport, Tx",Kuwait,70
+USME,"Freeport, Tx",Kuwait (Shuaiba),70
+USME,"Freeport, Tx",Sohar,70
+USME,Jacksonville,Abu Dhabi,70
+USME,Jacksonville,Bahrain,70
+USME,Jacksonville,Dammam,70
+USME,Jacksonville,Hamad Port,70
+USME,Jacksonville,Jebel Ali,70
+USME,Jacksonville,Kuwait,70
+USME,Jacksonville,Kuwait (Shuaiba),70
+USME,Jacksonville,Sohar,70
+USME,Port Arthur,Abu Dhabi,70
+USME,Port Arthur,Bahrain,70
+USME,Port Arthur,Dammam,70
+USME,Port Arthur,Hamad Port,70
+USME,Port Arthur,Jebel Ali,70
+USME,Port Arthur,Kuwait,70
+USME,Port Arthur,Kuwait (Shuaiba),70
+USME,Port Arthur,Sohar,70
+USME,Veracruz,Abu Dhabi,70
+USME,Veracruz,Bahrain,70
+USME,Veracruz,Dammam,70
+USME,Veracruz,Hamad Port,70
+USME,Veracruz,Jebel Ali,70
+USME,Veracruz,Kuwait,70
+USME,Veracruz,Kuwait (Shuaiba),70
+USME,Veracruz,Sohar,70
+USME,"Wilmington, De",Abu Dhabi,70
+USME,"Wilmington, De",Bahrain,70
+USME,"Wilmington, De",Dammam,70
+USME,"Wilmington, De",Hamad Port,70
+USME,"Wilmington, De",Jebel Ali,70
+USME,"Wilmington, De",Kuwait,70
+USME,"Wilmington, De",Kuwait (Shuaiba),70
+USME,"Wilmington, De",Sohar,70
