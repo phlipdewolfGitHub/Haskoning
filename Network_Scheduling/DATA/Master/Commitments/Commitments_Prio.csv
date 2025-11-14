@@ -1,0 +1,239 @@
+﻿Trade,Port from,Port to,Frequency
+EUAF,Antwerp,Auckland,2
+EUAF,Antwerp,Baltimore,1
+EUAF,Antwerp,Brisbane,2
+EUAF,Antwerp,Durban,2     #THIS ONE ISNT POSSIBLE, DURBAN ISN'T ON ALL 3 REQUESTED LANES. COULD MAYBE BE DONE ON EUME BASED ON SUBAREAS
+EUAF,Antwerp,Fremantle,2
+EUAF,Antwerp,Jacksonville,1
+EUAF,Antwerp,Melbourne,3
+EUAF,Antwerp,Port Kembla,3
+EUAF,Antwerp,Port Louis,1
+EUAF,Antwerp,Port Reunion,1
+EUAF,Antwerp,Tamatave,1
+EUAF,Baltimore,Auckland,1
+EUAF,Baltimore,Brisbane,1
+EUAF,Baltimore,Melbourne,1
+EUAF,Baltimore,Port Kembla,1
+EUAF,Bremerhaven,Auckland,2
+EUAF,Bremerhaven,Brisbane,2
+EUAF,Bremerhaven,Durban,2   #SHOULD ALSO BE 2, WAS 3. Also EUME
+EUAF,Bremerhaven,Fremantle,2
+EUAF,Bremerhaven,Melbourne,3
+EUAF,Bremerhaven,Noumea,1
+EUAF,Bremerhaven,Port Elizabeth,2 #Should be 3, Also EUME
+EUAF,Bremerhaven,Port Kembla,3
+EUAF,Bremerhaven,Port Louis,1
+EUAF,Bremerhaven,Port Reunion,1
+EUAF,Bremerhaven,Tamatave,1
+EUAF,Durban,Auckland,1
+EUAF,Durban,Brisbane,1
+EUAF,Durban,Fremantle,2
+EUAF,Durban,Melbourne,2
+EUAF,Durban,Port Kembla,2
+EUAF,Gothenburg,Auckland,1
+EUAF,Gothenburg,Brisbane,1
+EUAF,Gothenburg,Durban,2
+EUAF,Gothenburg,Fremantle,2
+EUAF,Gothenburg,Melbourne,2
+EUAF,Gothenburg,Port Kembla,2
+EUAF,Jacksonville,Auckland,1
+EUAF,Jacksonville,Melbourne,1
+EUAF,Jacksonville,Port Kembla,1
+EUAF,Le Havre,Auckland,1
+EUAF,Le Havre,Durban,2
+EUAF,Le Havre,Fremantle,1
+EUAF,Le Havre,Melbourne,1
+EUAF,Le Havre,Noumea,1
+EUAF,Le Havre,Port Kembla,1
+EUAF,Le Havre,Port Louis,1
+EUAF,Le Havre,Port Reunion,1
+EUAF,Le Havre,Tamatave,1
+EUAF,Newcastle,Antwerp,1
+EUAF,Newcastle,Auckland,1
+EUAF,Newcastle,Brisbane,1
+EUAF,Newcastle,Durban,1
+EUAF,Newcastle,Fremantle,1
+EUAF,Newcastle,Melbourne,1
+EUAF,Newcastle,Noumea,1
+EUAF,Newcastle,Port Kembla,1
+EUAF,Port Elizabeth,Auckland,1
+EUAF,Port Elizabeth,Brisbane,1
+EUAF,Port Elizabeth,Fremantle,1
+EUAF,Port Elizabeth,Melbourne,2
+EUAF,Port Elizabeth,Noumea,1
+EUAF,Port Elizabeth,Port Kembla,2
+EUAF,Port Elizabeth,Port Louis,1
+EUAF,Santander,Auckland,1
+EUAF,Santander,Brisbane,1
+EUAF,Santander,Durban,2
+EUAF,Santander,Fremantle,2
+EUAF,Santander,Melbourne,2
+EUAF,Santander,Noumea,1
+EUAF,Santander,Port Elizabeth,2   #SHOULD BE 3, EUME potential
+EUAF,Santander,Port Kembla,2
+EUAF,Santander,Port Louis,1
+EUAF,Santander,Port Reunion,1
+EUAF,Santander,Tamatave,1
+EUAF,Southampton,Auckland,1
+EUAF,Southampton,Brisbane,2
+EUAF,Southampton,Durban,2
+EUAF,Southampton,Fremantle,2
+EUAF,Southampton,Melbourne,2
+EUAF,Southampton,Port Kembla,2
+EUAF,Southampton,Port Louis,1
+EUAF,Southampton,Port Reunion,1
+EUAF,Southampton,Tamatave,1
+EUAF,Tangier,Auckland,1
+EUAF,Tangier,Durban,1
+EUAF,Tangier,Fremantle,1
+EUAF,Tangier,Melbourne,1
+EUAF,Tangier,Noumea,1
+EUAF,Tangier,Port Kembla,1
+EUAF,Tangier,Port Louis,1
+EUAF,Tangier,Port Reunion,1
+EUAF,Tangier,Tamatave,1
+EUME,Antwerp,Durban,1  #HANDMATIG VERANDERD VANUIT EUAF
+EUME,Antwerp,Abu Dhabi,1
+EUME,Antwerp,Bahrain,2
+EUME,Antwerp,Dammam,1
+EUME,Antwerp,Hamad Port,2
+EUME,Antwerp,Jebel Ali,2
+EUME,Antwerp,Kuwait,2
+EUME,Antwerp,Sohar,2
+EUME,Bremerhaven,Abu Dhabi,1
+EUME,Bremerhaven,Bahrain,2
+EUME,Bremerhaven,Dammam,1
+EUME,Bremerhaven,Durban,2  #OOK UIT EUAF
+EUME,Bremerhaven,Hamad Port,2
+EUME,Bremerhaven,Jebel Ali,2
+EUME,Bremerhaven,Kuwait,2
+EUME,Bremerhaven,Port Elizabeth,1 #SAME SAME
+EUME,Bremerhaven,Sohar,2
+EUME,Gothenburg,Antwerp,1
+EUME,Hamburg,Abu Dhabi,1
+EUME,Hamburg,Bahrain,1
+EUME,Hamburg,Dammam,1
+EUME,Hamburg,Hamad Port,1
+EUME,Hamburg,Jebel Ali,1
+EUME,Hamburg,Kuwait,1
+EUME,Hamburg,Sohar,1
+EUME,Santander,Port Elizabeth,1  #FROM EUAF
+EUME,Southampton,Abu Dhabi,1
+EUME,Southampton,Bahrain,2
+EUME,Southampton,Dammam,1
+EUME,Southampton,Hamad Port,2
+EUME,Southampton,Jebel Ali,2
+EUME,Southampton,Kuwait,2
+EUME,Southampton,Sohar,2
+FEEU,Hitachinaka,Amsterdam,2
+FEEU,Hitachinaka,Newcastle,2
+FEEU,Kobe,Amsterdam,2
+FEEU,Kobe,Newcastle,2
+FEEU,Kobe,Valletta,1
+FEEU,Omaezaki,Bremerhaven,2
+FEEU,Omaezaki,Livorno,1
+FEEU,Omaezaki,Zeebrugge,2
+FEEU,Taicang,Barcelona,2
+FEEU,Taicang,Bristol,2
+FEEU,Taicang,Djen-Djen,1
+FEEU,Taicang,Livorno,1
+FEEU,Taicang,Zeebrugge,2
+FEEU,Yokohama,Valletta,1
+FEUS,Gamagori,Baltimore,2
+FEUS,Gamagori,FreeportTx,2
+FEUS,Gamagori,Jacksonville,2
+FEUS,Hiroshima,Baltimore,1
+FEUS,Hiroshima,FreeportTx,1
+FEUS,Hiroshima,Jacksonville,1
+FEUS,Incheon,Baltimore,2
+FEUS,Incheon,Brunswick,2
+FEUS,Incheon,FreeportTx,1
+FEUS,Incheon,Jacksonville,1
+FEUS,Incheon,New York,1
+FEUS,Kawasaki,Baltimore,1
+FEUS,Kawasaki,Brunswick,1
+FEUS,Kawasaki,FreeportTx,1
+FEUS,Kawasaki,Kingston (Jam),2
+FEUS,Kingston (Jam),Baltimore,1
+FEUS,Kingston (Jam),FreeportTx,1
+FEUS,Kingston (Jam),Jacksonville,1
+FEUS,Kobe,Baltimore,2
+FEUS,Kobe,FreeportTx,2
+FEUS,Kobe,Jacksonville,2
+FEUS,Kobe,Kingston (Jam),2
+FEUS,Masan,Baltimore,2
+FEUS,Masan,Brunswick,2
+FEUS,Masan,FreeportTx,2
+FEUS,Masan,Jacksonville,1
+FEUS,Masan,Kingston (Jam),2
+FEUS,Masan,New York,1
+FEUS,Mizushima,Baltimore,1
+FEUS,Mizushima,FreeportTx,1
+FEUS,Mizushima,Jacksonville,1
+FEUS,Nagoya,Baltimore,1
+FEUS,Nagoya,FreeportTx,1
+FEUS,Nagoya,Jacksonville,1
+FEUS,Nagoya,Kingston (Jam),1
+FEUS,Taicang,Baltimore,1
+FEUS,Taicang,FreeportTx,2
+FEUS,Taicang,Jacksonville,1
+FEUS,Taicang,Kingston (Jam),2
+FEUS,Taicang,Mobile,2
+MIAF,Durban,Kingston (Jam),2
+MIAF,Durban,Veracruz,2
+MIAF,Ennore,Kingston (Jam),1
+MIAF,Ennore,Veracruz,2
+MIAF,Kuwait,Jacksonville,1
+MIAF,Kuwait,Port Arthur,1
+MIAF,Mumbai,Veracruz,2
+MIAF,Pipavav (Victor) Port,Durban,1
+MIAF,Pipavav (Victor) Port,Kingston (Jam),1
+MIAF,Pipavav (Victor) Port,Veracruz,1
+USME,Altamira,Abu Dhabi,1
+USME,Altamira,Bahrain,1
+USME,Altamira,Dammam,1
+USME,Altamira,Hamad Port,1
+USME,Altamira,Jebel Ali,1
+USME,Altamira,Kuwait,1
+USME,Altamira,Sohar,1
+USME,Brunswick,Abu Dhabi,1
+USME,Brunswick,Bahrain,1
+USME,Brunswick,Dammam,1
+USME,Brunswick,Hamad Port,1
+USME,Brunswick,Jebel Ali,1
+USME,Brunswick,Kuwait,1
+USME,Brunswick,Sohar,1
+USME,CharlestonSC,Abu Dhabi,1
+USME,CharlestonSC,Bahrain,1
+USME,CharlestonSC,Kuwait (Shuaiba),1
+USME,FreeportTx,Abu Dhabi,2
+USME,FreeportTx,Bahrain,2
+USME,FreeportTx,Dammam,2
+USME,FreeportTx,Hamad Port,2
+USME,FreeportTx,Jebel Ali,2
+USME,FreeportTx,Kuwait,2
+USME,FreeportTx,Sohar,2
+USME,Jacksonville,Abu Dhabi,2   #THIS IS A WEIRD ONE, ONLY 2 REQUESTED POSITIONS FOR USME. Cant be done elsewhere 
+USME,Jacksonville,Bahrain,2
+USME,Jacksonville,Dammam,2
+USME,Jacksonville,Hamad Port,2
+USME,Jacksonville,Jebel Ali,2    #SAME HERE
+USME,Jacksonville,Kuwait,2
+USME,Jacksonville,Sohar,2
+USME,Port Arthur,Abu Dhabi,1
+USME,Port Arthur,Bahrain,1
+USME,Port Arthur,Kuwait (Shuaiba),1
+USME,Veracruz,Abu Dhabi,1
+USME,Veracruz,Bahrain,1
+USME,Veracruz,Dammam,1
+USME,Veracruz,Hamad Port,1
+USME,Veracruz,Jebel Ali,1
+USME,Veracruz,Kuwait,1
+USME,Veracruz,Sohar,1
+USME,WilmingtonDe,Abu Dhabi,2
+USME,WilmingtonDe,Bahrain,2
+USME,WilmingtonDe,Dammam,2
+USME,WilmingtonDe,Hamad Port,2
+USME,WilmingtonDe,Jebel Ali,2
+USME,WilmingtonDe,Kuwait,2
+USME,WilmingtonDe,Sohar,2

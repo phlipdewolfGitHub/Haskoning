@@ -1,0 +1,16 @@
+﻿Trade,Port,Min spread (max 10),Desired position lower (max 15),Desired position upper (max 15),Port on USIN
+EUME,Hamburg,25,20,28,0
+EUME,Southampton,12,23,30,0
+FEER,Baltimore,8,0,0,0
+FEEU,Hitachinaka,10,20,30,0
+FEEU,Taicang,8,25,30,0
+FEUS,Kobe,0,25,28,0
+FEUS,Masan,0,23,25,0
+FEUS,Taicang,8,10,15,0
+MIAF,Ennore,10,20,24,0
+MIAF,Mumbai,10,25,28,0
+USME,Brunswick,20,24,28,0
+USME,CharlestonSC,0,0,0,1
+USME,Kuwait (Shuaiba),0,0,0,1
+USME,Port Arthur,0,0,0,1
+USME,Veracruz,12,23,28,0

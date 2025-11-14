@@ -1,0 +1,2142 @@
+Running all trades at verbose level 2
+Output file: Network_Scheduling/RESULTS/REPOSITIONED_EUAF_COMMITMENTS_ORIGINALTSP.txt
+Started at: 2025-11-13 13:49:59
+======================================================================
+
+
+######################################################################
+Processing trade: EUAF
+######################################################################
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2731237
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for EUAF...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 6 C2 start spread constraints (min_spread=5)
+Added 0 C3 port spread constraints
+Added 7 C4 start range constraints (range=[25,28], at least 1 position)
+Added 0 C7 port window constraints (at least 1 position per port)
+Added 12 C8 loading ports constraints
+Added 14 C9 discharging ports constraints
+Added 159 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 2716 rows, 733 columns and 7372 nonzeros
+Model fingerprint: 0xe3179cd7
+Variable types: 88 continuous, 645 integer (598 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [2e+00, 4e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 2496 rows and 566 columns
+Presolve time: 0.02s
+Presolved: 220 rows, 167 columns, 792 nonzeros
+Variable types: 55 continuous, 112 integer (88 binary)
+Found heuristic solution: objective 197.8288749
+Found heuristic solution: objective 197.6067215
+Found heuristic solution: objective 191.3339935
+Found heuristic solution: objective 188.3881050
+
+Root relaxation: objective 1.802113e+02, 86 iterations, 0.00 seconds (0.00 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                     182.1776605  180.21134  1.08%     -    0s
+     0     0  180.21134    0   49  182.17766  180.21134  1.08%     -    0s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 7
+  Cover: 2
+  Implied bound: 29
+  Clique: 4
+  MIR: 27
+  StrongCG: 1
+  Flow cover: 2
+  Zero half: 2
+  Network: 1
+  RLT: 7
+  Relax-and-lift: 7
+
+Explored 1 nodes (99 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 5: 182.178 188.388 191.334 ... 197.829
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.821776605104e+02, best bound 1.821776605104e+02, gap 0.0000%
+Objective value: 182.178
+Solver Runtime: 0.05s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane EUAFviaCapetoOC):
+  Start day: s=6
+  Duration: 61.121 days
+  Loading ports visited: 9
+  Discharging ports visited: 7
+  #01 Gothenburg                Day-of-Month:  6.00  Time-since-start:   0.00d  Travel-time:  6.27d
+  #02 Bremerhaven               Day-of-Month:  7.92  Time-since-start:   1.92d  Travel-time:  4.35d
+  #03 Newcastle                 Day-of-Month: 10.44  Time-since-start:   4.44d  Travel-time:  1.83d
+  #04 Antwerp                   Day-of-Month: 12.27  Time-since-start:   6.27d  Travel-time:  0.00d
+  #05 Le Havre                  Day-of-Month: 14.44  Time-since-start:   8.44d  Travel-time: -2.17d
+  #06 Southampton               Day-of-Month: 16.10  Time-since-start:  10.10d  Travel-time: -3.83d
+  #07 Santander                 Day-of-Month: 18.08  Time-since-start:  12.08d  Travel-time: -5.82d
+  #08 Port Elizabeth            Day-of-Month:  5.12  Time-since-start:  29.12d  Travel-time: -22.85d
+  #09 Durban                    Day-of-Month:  7.34  Time-since-start:  31.34d  Travel-time: -25.07d
+  #10 Fremantle                 Day-of-Month: 20.73  Time-since-start:  44.73d  Travel-time: -38.46d
+  #11 Melbourne                 Day-of-Month: 28.23  Time-since-start:  52.23d  Travel-time: -45.96d
+  #12 Port Kembla               Day-of-Month:  2.69  Time-since-start:  56.69d  Travel-time: -50.42d
+  #13 Brisbane                  Day-of-Month:  7.12  Time-since-start:  61.12d  Travel-time: -54.85d
+  Travel times verification:
+    SOURCE → Gothenburg: alpha=0.000d, expected=0.000d ✓
+    Gothenburg → Bremerhaven: actual=1.922d, expected=1.922d ✓
+    Bremerhaven → Newcastle: actual=2.518d, expected=2.518d ✓
+    Newcastle → Antwerp: actual=1.827d, expected=1.827d ✓
+    Antwerp → Le Havre: actual=2.175d, expected=2.175d ✓
+    Le Havre → Southampton: actual=1.657d, expected=1.657d ✓
+    Southampton → Santander: actual=1.985d, expected=1.985d ✓
+    Santander → Port Elizabeth: actual=17.034d, expected=17.034d ✓
+    Port Elizabeth → Durban: actual=2.218d, expected=2.218d ✓
+    Durban → Fremantle: actual=13.396d, expected=13.396d ✓
+    Fremantle → Melbourne: actual=7.495d, expected=7.495d ✓
+    Melbourne → Port Kembla: actual=4.460d, expected=4.460d ✓
+    Port Kembla → Brisbane: actual=4.433d, expected=4.433d ✓
+  Commitments served by this position:
+    - Antwerp -> Brisbane (Transit: 54.85d)
+    - Antwerp -> Durban (Transit: 25.07d)
+    - Antwerp -> Fremantle (Transit: 38.46d)
+    - Antwerp -> Melbourne (Transit: 45.96d)
+    - Antwerp -> Port Kembla (Transit: 50.42d)
+    - Bremerhaven -> Brisbane (Transit: 59.20d)
+    - Bremerhaven -> Durban (Transit: 29.41d)
+    - Bremerhaven -> Fremantle (Transit: 42.81d)
+    - Bremerhaven -> Melbourne (Transit: 50.31d)
+    - Bremerhaven -> Port Elizabeth (Transit: 27.20d)
+    - Bremerhaven -> Port Kembla (Transit: 54.77d)
+    - Durban -> Brisbane (Transit: 29.78d)
+    - Durban -> Fremantle (Transit: 13.40d)
+    - Durban -> Melbourne (Transit: 20.89d)
+    - Durban -> Port Kembla (Transit: 25.35d)
+    - Gothenburg -> Brisbane (Transit: 61.12d)
+    - Gothenburg -> Durban (Transit: 31.34d)
+    - Gothenburg -> Fremantle (Transit: 44.73d)
+    - Gothenburg -> Melbourne (Transit: 52.23d)
+    - Gothenburg -> Port Kembla (Transit: 56.69d)
+    - Le Havre -> Durban (Transit: 22.89d)
+    - Le Havre -> Fremantle (Transit: 36.29d)
+    - Le Havre -> Melbourne (Transit: 43.79d)
+    - Le Havre -> Port Kembla (Transit: 48.24d)
+    - Newcastle -> Antwerp (Transit: 1.83d)
+    - Newcastle -> Brisbane (Transit: 56.68d)
+    - Newcastle -> Durban (Transit: 26.90d)
+    - Newcastle -> Fremantle (Transit: 40.29d)
+    - Newcastle -> Melbourne (Transit: 47.79d)
+    - Newcastle -> Port Kembla (Transit: 52.25d)
+    - Port Elizabeth -> Brisbane (Transit: 32.00d)
+    - Port Elizabeth -> Fremantle (Transit: 15.61d)
+    - Port Elizabeth -> Melbourne (Transit: 23.11d)
+    - Port Elizabeth -> Port Kembla (Transit: 27.57d)
+    - Santander -> Brisbane (Transit: 49.04d)
+    - Santander -> Durban (Transit: 19.25d)
+    - Santander -> Fremantle (Transit: 32.65d)
+    - Santander -> Melbourne (Transit: 40.14d)
+    - Santander -> Port Elizabeth (Transit: 17.03d)
+    - Santander -> Port Kembla (Transit: 44.60d)
+    - Southampton -> Brisbane (Transit: 51.02d)
+    - Southampton -> Durban (Transit: 21.24d)
+    - Southampton -> Fremantle (Transit: 34.63d)
+    - Southampton -> Melbourne (Transit: 42.13d)
+    - Southampton -> Port Kembla (Transit: 46.59d)
+
+Position (0, 1) (lane EUAFviaCapetoOC):
+  Start day: s=1
+  Duration: 66.812 days
+  Loading ports visited: 9
+  Discharging ports visited: 8
+  #01 Gothenburg                Day-of-Month:  1.00  Time-since-start:   0.00d  Travel-time: 63.24d
+  #02 Bremerhaven               Day-of-Month:  2.92  Time-since-start:   1.92d  Travel-time: 61.32d
+  #03 Newcastle                 Day-of-Month:  5.44  Time-since-start:   4.44d  Travel-time: 58.80d
+  #04 Antwerp                   Day-of-Month:  7.27  Time-since-start:   6.27d  Travel-time: 56.97d
+  #05 Le Havre                  Day-of-Month:  9.44  Time-since-start:   8.44d  Travel-time: 54.80d
+  #06 Southampton               Day-of-Month: 11.10  Time-since-start:  10.10d  Travel-time: 53.14d
+  #07 Santander                 Day-of-Month: 13.08  Time-since-start:  12.08d  Travel-time: 51.16d
+  #08 Port Elizabeth            Day-of-Month: 30.12  Time-since-start:  29.12d  Travel-time: 34.12d
+  #09 Durban                    Day-of-Month:  2.34  Time-since-start:  31.34d  Travel-time: 31.90d
+  #10 Fremantle                 Day-of-Month: 15.73  Time-since-start:  44.73d  Travel-time: 18.51d
+  #11 Melbourne                 Day-of-Month: 23.23  Time-since-start:  52.23d  Travel-time: 11.01d
+  #12 Port Kembla               Day-of-Month: 27.69  Time-since-start:  56.69d  Travel-time:  6.55d
+  #13 Auckland                  Day-of-Month:  4.24  Time-since-start:  63.24d  Travel-time:  0.00d
+  #14 Noumea                    Day-of-Month:  7.81  Time-since-start:  66.81d  Travel-time: -3.57d
+  Travel times verification:
+    SOURCE → Gothenburg: alpha=0.000d, expected=0.000d ✓
+    Gothenburg → Bremerhaven: actual=1.922d, expected=1.922d ✓
+    Bremerhaven → Newcastle: actual=2.518d, expected=2.518d ✓
+    Newcastle → Antwerp: actual=1.827d, expected=1.827d ✓
+    Antwerp → Le Havre: actual=2.175d, expected=2.175d ✓
+    Le Havre → Southampton: actual=1.657d, expected=1.657d ✓
+    Southampton → Santander: actual=1.985d, expected=1.985d ✓
+    Santander → Port Elizabeth: actual=17.034d, expected=17.034d ✓
+    Port Elizabeth → Durban: actual=2.218d, expected=2.218d ✓
+    Durban → Fremantle: actual=13.396d, expected=13.396d ✓
+    Fremantle → Melbourne: actual=7.495d, expected=7.495d ✓
+    Melbourne → Port Kembla: actual=4.460d, expected=4.460d ✓
+    Port Kembla → Auckland: actual=6.554d, expected=6.554d ✓
+    Auckland → Noumea: actual=3.571d, expected=3.571d ✓
+  Commitments served by this position:
+    - Antwerp -> Auckland (Transit: 56.97d)
+    - Antwerp -> Durban (Transit: 25.07d)
+    - Antwerp -> Fremantle (Transit: 38.46d)
+    - Antwerp -> Melbourne (Transit: 45.96d)
+    - Antwerp -> Port Kembla (Transit: 50.42d)
+    - Bremerhaven -> Auckland (Transit: 61.32d)
+    - Bremerhaven -> Durban (Transit: 29.41d)
+    - Bremerhaven -> Fremantle (Transit: 42.81d)
+    - Bremerhaven -> Melbourne (Transit: 50.31d)
+    - Bremerhaven -> Noumea (Transit: 64.89d)
+    - Bremerhaven -> Port Elizabeth (Transit: 27.20d)
+    - Bremerhaven -> Port Kembla (Transit: 54.77d)
+    - Durban -> Auckland (Transit: 31.90d)
+    - Durban -> Fremantle (Transit: 13.40d)
+    - Durban -> Melbourne (Transit: 20.89d)
+    - Durban -> Port Kembla (Transit: 25.35d)
+    - Gothenburg -> Auckland (Transit: 63.24d)
+    - Gothenburg -> Durban (Transit: 31.34d)
+    - Gothenburg -> Fremantle (Transit: 44.73d)
+    - Gothenburg -> Melbourne (Transit: 52.23d)
+    - Gothenburg -> Port Kembla (Transit: 56.69d)
+    - Le Havre -> Auckland (Transit: 54.80d)
+    - Le Havre -> Durban (Transit: 22.89d)
+    - Le Havre -> Fremantle (Transit: 36.29d)
+    - Le Havre -> Melbourne (Transit: 43.79d)
+    - Le Havre -> Noumea (Transit: 58.37d)
+    - Le Havre -> Port Kembla (Transit: 48.24d)
+    - Newcastle -> Auckland (Transit: 58.80d)
+    - Newcastle -> Durban (Transit: 26.90d)
+    - Newcastle -> Fremantle (Transit: 40.29d)
+    - Newcastle -> Melbourne (Transit: 47.79d)
+    - Newcastle -> Noumea (Transit: 62.37d)
+    - Port Elizabeth -> Auckland (Transit: 34.12d)
+    - Port Elizabeth -> Fremantle (Transit: 15.61d)
+    - Port Elizabeth -> Melbourne (Transit: 23.11d)
+    - Port Elizabeth -> Noumea (Transit: 37.69d)
+    - Port Elizabeth -> Port Kembla (Transit: 27.57d)
+    - Santander -> Auckland (Transit: 51.16d)
+    - Santander -> Durban (Transit: 19.25d)
+    - Santander -> Fremantle (Transit: 32.65d)
+    - Santander -> Melbourne (Transit: 40.14d)
+    - Santander -> Noumea (Transit: 54.73d)
+    - Santander -> Port Elizabeth (Transit: 17.03d)
+    - Santander -> Port Kembla (Transit: 44.60d)
+    - Southampton -> Auckland (Transit: 53.14d)
+    - Southampton -> Durban (Transit: 21.24d)
+    - Southampton -> Fremantle (Transit: 34.63d)
+    - Southampton -> Melbourne (Transit: 42.13d)
+    - Southampton -> Port Kembla (Transit: 46.59d)
+
+Position (2, 0) (lane EUAFviaUS):
+  Start day: s=25
+  Duration: 54.245 days
+  Loading ports visited: 5
+  Discharging ports visited: 7
+  #01 Bremerhaven               Day-of-Month: 25.00  Time-since-start:   0.00d  Travel-time:  0.00d
+  #02 Antwerp                   Day-of-Month: 27.38  Time-since-start:   2.38d  Travel-time:  0.00d
+  #03 Southampton               Day-of-Month: 29.58  Time-since-start:   4.58d  Travel-time:  0.00d
+  #04 Baltimore                 Day-of-Month:  8.89  Time-since-start:  13.89d  Travel-time:  0.00d
+  #05 Jacksonville              Day-of-Month: 11.89  Time-since-start:  16.89d  Travel-time:  0.00d
+  #06 Auckland                  Day-of-Month:  5.07  Time-since-start:  40.07d  Travel-time:  0.00d
+  #07 Melbourne                 Day-of-Month: 10.35  Time-since-start:  45.35d  Travel-time:  0.00d
+  #08 Port Kembla               Day-of-Month: 14.81  Time-since-start:  49.81d  Travel-time:  0.00d
+  #09 Brisbane                  Day-of-Month: 19.24  Time-since-start:  54.24d  Travel-time:  0.00d
+  Travel times verification:
+    SOURCE → Bremerhaven: alpha=0.000d, expected=0.000d ✓
+    Bremerhaven → Antwerp: actual=2.379d, expected=2.379d ✓
+    Antwerp → Southampton: actual=2.198d, expected=2.198d ✓
+    Southampton → Baltimore: actual=9.310d, expected=9.310d ✓
+    Baltimore → Jacksonville: actual=3.003d, expected=3.003d ✓
+    Jacksonville → Auckland: actual=23.177d, expected=23.177d ✓
+    Auckland → Melbourne: actual=5.284d, expected=5.284d ✓
+    Melbourne → Port Kembla: actual=4.460d, expected=4.460d ✓
+    Port Kembla → Brisbane: actual=4.433d, expected=4.433d ✓
+  Commitments served by this position:
+    - Antwerp -> Auckland (Transit: 37.69d)
+    - Antwerp -> Baltimore (Transit: 11.51d)
+    - Antwerp -> Brisbane (Transit: 51.87d)
+    - Antwerp -> Jacksonville (Transit: 14.51d)
+    - Antwerp -> Melbourne (Transit: 42.97d)
+    - Antwerp -> Port Kembla (Transit: 47.43d)
+    - Baltimore -> Auckland (Transit: 26.18d)
+    - Baltimore -> Brisbane (Transit: 40.36d)
+    - Baltimore -> Melbourne (Transit: 31.46d)
+    - Baltimore -> Port Kembla (Transit: 35.92d)
+    - Bremerhaven -> Auckland (Transit: 40.07d)
+    - Bremerhaven -> Brisbane (Transit: 54.24d)
+    - Bremerhaven -> Melbourne (Transit: 45.35d)
+    - Bremerhaven -> Port Kembla (Transit: 49.81d)
+    - Jacksonville -> Auckland (Transit: 23.18d)
+    - Jacksonville -> Melbourne (Transit: 28.46d)
+    - Jacksonville -> Port Kembla (Transit: 32.92d)
+    - Southampton -> Brisbane (Transit: 49.67d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 5 days
+    (0, 1): s=1
+    (0, 0): s=6
+    (2, 0): s=25
+  Actual minimum spread: 5.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [25, 28]
+  Designated positions in range:
+    (2, 0): s=25 (OK)
+  Overall status: OK
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Antwerp -> Auckland: max=70 days
+      (0, 1): 57.0 days (OK)
+      (2, 0): 37.7 days (OK)
+  Antwerp -> Baltimore: max=50 days
+      (2, 0): 11.5 days (OK)
+  Antwerp -> Brisbane: max=70 days
+      (0, 0): 54.9 days (OK)
+      (2, 0): 51.9 days (OK)
+  Antwerp -> Durban: max=70 days
+      (0, 0): 25.1 days (OK)
+      (0, 1): 25.1 days (OK)
+  Antwerp -> Fremantle: max=70 days
+      (0, 0): 38.5 days (OK)
+      (0, 1): 38.5 days (OK)
+  Antwerp -> Jacksonville: max=70 days
+      (2, 0): 14.5 days (OK)
+  Antwerp -> Melbourne: max=70 days
+      (0, 0): 46.0 days (OK)
+      (0, 1): 46.0 days (OK)
+      (2, 0): 43.0 days (OK)
+  Antwerp -> Port Kembla: max=70 days
+      (0, 0): 50.4 days (OK)
+      (0, 1): 50.4 days (OK)
+      (2, 0): 47.4 days (OK)
+  Baltimore -> Auckland: max=70 days
+      (2, 0): 26.2 days (OK)
+  Baltimore -> Brisbane: max=70 days
+      (2, 0): 40.4 days (OK)
+  Baltimore -> Melbourne: max=70 days
+      (2, 0): 31.5 days (OK)
+  Baltimore -> Port Kembla: max=70 days
+      (2, 0): 35.9 days (OK)
+  Bremerhaven -> Auckland: max=70 days
+      (0, 1): 61.3 days (OK)
+      (2, 0): 40.1 days (OK)
+  Bremerhaven -> Brisbane: max=70 days
+      (0, 0): 59.2 days (OK)
+      (2, 0): 54.2 days (OK)
+  Bremerhaven -> Durban: max=70 days
+      (0, 0): 29.4 days (OK)
+      (0, 1): 29.4 days (OK)
+  Bremerhaven -> Fremantle: max=70 days
+      (0, 0): 42.8 days (OK)
+      (0, 1): 42.8 days (OK)
+  Bremerhaven -> Melbourne: max=70 days
+      (0, 0): 50.3 days (OK)
+      (0, 1): 50.3 days (OK)
+      (2, 0): 45.4 days (OK)
+  Bremerhaven -> Noumea: max=70 days
+      (0, 1): 64.9 days (OK)
+  Bremerhaven -> Port Elizabeth: max=70 days
+      (0, 0): 27.2 days (OK)
+      (0, 1): 27.2 days (OK)
+  Bremerhaven -> Port Kembla: max=70 days
+      (0, 0): 54.8 days (OK)
+      (0, 1): 54.8 days (OK)
+      (2, 0): 49.8 days (OK)
+  Durban -> Auckland: max=40 days
+      (0, 1): 31.9 days (OK)
+  Durban -> Brisbane: max=40 days
+      (0, 0): 29.8 days (OK)
+  Durban -> Fremantle: max=40 days
+      (0, 0): 13.4 days (OK)
+      (0, 1): 13.4 days (OK)
+  Durban -> Melbourne: max=40 days
+      (0, 0): 20.9 days (OK)
+      (0, 1): 20.9 days (OK)
+  Durban -> Port Kembla: max=40 days
+      (0, 0): 25.4 days (OK)
+      (0, 1): 25.4 days (OK)
+  Gothenburg -> Auckland: max=70 days
+      (0, 1): 63.2 days (OK)
+  Gothenburg -> Brisbane: max=70 days
+      (0, 0): 61.1 days (OK)
+  Gothenburg -> Durban: max=70 days
+      (0, 0): 31.3 days (OK)
+      (0, 1): 31.3 days (OK)
+  Gothenburg -> Fremantle: max=70 days
+      (0, 0): 44.7 days (OK)
+      (0, 1): 44.7 days (OK)
+  Gothenburg -> Melbourne: max=70 days
+      (0, 0): 52.2 days (OK)
+      (0, 1): 52.2 days (OK)
+  Gothenburg -> Port Kembla: max=70 days
+      (0, 0): 56.7 days (OK)
+      (0, 1): 56.7 days (OK)
+  Jacksonville -> Auckland: max=70 days
+      (2, 0): 23.2 days (OK)
+  Jacksonville -> Melbourne: max=70 days
+      (2, 0): 28.5 days (OK)
+  Jacksonville -> Port Kembla: max=70 days
+      (2, 0): 32.9 days (OK)
+  Le Havre -> Auckland: max=70 days
+      (0, 1): 54.8 days (OK)
+  Le Havre -> Durban: max=70 days
+      (0, 0): 22.9 days (OK)
+      (0, 1): 22.9 days (OK)
+  Le Havre -> Fremantle: max=70 days
+      (0, 0): 36.3 days (OK)
+      (0, 1): 36.3 days (OK)
+  Le Havre -> Melbourne: max=70 days
+      (0, 0): 43.8 days (OK)
+      (0, 1): 43.8 days (OK)
+  Le Havre -> Noumea: max=70 days
+      (0, 1): 58.4 days (OK)
+  Le Havre -> Port Kembla: max=70 days
+      (0, 0): 48.2 days (OK)
+      (0, 1): 48.2 days (OK)
+  Newcastle -> Antwerp: max=15 days
+      (0, 0): 1.8 days (OK)
+  Newcastle -> Auckland: max=70 days
+      (0, 1): 58.8 days (OK)
+  Newcastle -> Brisbane: max=70 days
+      (0, 0): 56.7 days (OK)
+  Newcastle -> Durban: max=70 days
+      (0, 0): 26.9 days (OK)
+      (0, 1): 26.9 days (OK)
+  Newcastle -> Fremantle: max=70 days
+      (0, 0): 40.3 days (OK)
+      (0, 1): 40.3 days (OK)
+  Newcastle -> Melbourne: max=70 days
+      (0, 0): 47.8 days (OK)
+      (0, 1): 47.8 days (OK)
+  Newcastle -> Noumea: max=70 days
+      (0, 1): 62.4 days (OK)
+  Newcastle -> Port Kembla: max=70 days
+      (0, 0): 52.2 days (OK)
+  Port Elizabeth -> Auckland: max=40 days
+      (0, 1): 34.1 days (OK)
+  Port Elizabeth -> Brisbane: max=40 days
+      (0, 0): 32.0 days (OK)
+  Port Elizabeth -> Fremantle: max=40 days
+      (0, 0): 15.6 days (OK)
+      (0, 1): 15.6 days (OK)
+  Port Elizabeth -> Melbourne: max=40 days
+      (0, 0): 23.1 days (OK)
+      (0, 1): 23.1 days (OK)
+  Port Elizabeth -> Noumea: max=45 days
+      (0, 1): 37.7 days (OK)
+  Port Elizabeth -> Port Kembla: max=40 days
+      (0, 0): 27.6 days (OK)
+      (0, 1): 27.6 days (OK)
+  Santander -> Auckland: max=70 days
+      (0, 1): 51.2 days (OK)
+  Santander -> Brisbane: max=70 days
+      (0, 0): 49.0 days (OK)
+  Santander -> Durban: max=70 days
+      (0, 0): 19.3 days (OK)
+      (0, 1): 19.3 days (OK)
+  Santander -> Fremantle: max=70 days
+      (0, 0): 32.6 days (OK)
+      (0, 1): 32.6 days (OK)
+  Santander -> Melbourne: max=70 days
+      (0, 0): 40.1 days (OK)
+      (0, 1): 40.1 days (OK)
+  Santander -> Noumea: max=70 days
+      (0, 1): 54.7 days (OK)
+  Santander -> Port Elizabeth: max=70 days
+      (0, 0): 17.0 days (OK)
+      (0, 1): 17.0 days (OK)
+  Santander -> Port Kembla: max=70 days
+      (0, 0): 44.6 days (OK)
+      (0, 1): 44.6 days (OK)
+  Southampton -> Auckland: max=70 days
+      (0, 1): 53.1 days (OK)
+  Southampton -> Brisbane: max=70 days
+      (0, 0): 51.0 days (OK)
+      (2, 0): 49.7 days (OK)
+  Southampton -> Durban: max=70 days
+      (0, 0): 21.2 days (OK)
+      (0, 1): 21.2 days (OK)
+  Southampton -> Fremantle: max=70 days
+      (0, 0): 34.6 days (OK)
+      (0, 1): 34.6 days (OK)
+  Southampton -> Melbourne: max=70 days
+      (0, 0): 42.1 days (OK)
+      (0, 1): 42.1 days (OK)
+  Southampton -> Port Kembla: max=70 days
+      (0, 0): 46.6 days (OK)
+      (0, 1): 46.6 days (OK)
+  All transit time constraints satisfied
+
+######################################################################
+Processing trade: EUME
+######################################################################
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for EUME...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 2 C2 start spread constraints (min_spread=10)
+Added 4 C3 port spread constraints
+Added 5 C4 start range constraints (range=[20,25], at least 1 position)
+Added 4 C5 death avoidance constraints (range=[27,30])
+Added 14 C7 port window constraints (at least 1 position per port)
+Added 6 C8 loading ports constraints
+Added 10 C9 discharging ports constraints
+Added 58 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 1774 rows, 469 columns and 4830 nonzeros
+Model fingerprint: 0xbc748451
+Variable types: 60 continuous, 409 integer (377 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [7e-01, 3e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 1603 rows and 376 columns
+Presolve time: 0.01s
+Presolved: 171 rows, 93 columns, 603 nonzeros
+Variable types: 38 continuous, 55 integer (35 binary)
+Found heuristic solution: objective 96.9449235
+Found heuristic solution: objective 96.3954292
+Found heuristic solution: objective 95.1949869
+Found heuristic solution: objective 94.4730684
+Found heuristic solution: objective 94.4631350
+
+Root relaxation: objective 9.127087e+01, 65 iterations, 0.00 seconds (0.00 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      93.2016141   91.27087  2.07%     -    0s
+     0     0   91.27087    0   15   93.20161   91.27087  2.07%     -    0s
+H    0     0                      91.2708729   91.27087  0.00%     -    0s
+     0     0   91.27087    0   15   91.27087   91.27087  0.00%     -    0s
+
+Explored 1 nodes (129 simplex iterations) in 0.02 seconds (0.02 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 7: 91.2709 93.2016 94.4631 ... 96.9449
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.127087290090e+01, best bound 9.127087290090e+01, gap 0.0000%
+Objective value: 91.271
+Solver Runtime: 0.02s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane EUMEviaCape):
+  Start day: s=21
+  Duration: 45.389 days
+  Loading ports visited: 4
+  Discharging ports visited: 9
+  #01 Hamburg                   Day-of-Month: 21.00  Time-since-start:   0.00d  Travel-time:  3.09d
+  #02 Bremerhaven               Day-of-Month: 21.72  Time-since-start:   0.72d  Travel-time:  2.38d
+  #03 Antwerp                   Day-of-Month: 24.09  Time-since-start:   3.09d  Travel-time:  0.00d
+  #04 Southampton               Day-of-Month: 26.29  Time-since-start:   5.29d  Travel-time: -2.20d
+  #05 Durban                    Day-of-Month: 15.05  Time-since-start:  24.05d  Travel-time: -20.95d
+  #06 Sohar                     Day-of-Month: 27.26  Time-since-start:  36.26d  Travel-time: -33.16d
+  #07 Kuwait                    Day-of-Month: 29.59  Time-since-start:  38.59d  Travel-time: -35.50d
+  #08 Dammam                    Day-of-Month: 30.80  Time-since-start:  39.80d  Travel-time: -36.71d
+  #09 Bahrain                   Day-of-Month:  2.91  Time-since-start:  41.91d  Travel-time: -38.81d
+  #10 Hamad Port                Day-of-Month:  4.31  Time-since-start:  43.31d  Travel-time: -40.21d
+  #11 Abu Dhabi                 Day-of-Month:  5.12  Time-since-start:  44.12d  Travel-time: -41.03d
+  #12 Jebel Ali                 Day-of-Month:  6.39  Time-since-start:  45.39d  Travel-time: -42.29d
+  Travel times verification:
+    SOURCE → Hamburg: alpha=0.000d, expected=0.000d ✓
+    Hamburg → Bremerhaven: actual=0.716d, expected=0.716d ✓
+    Bremerhaven → Antwerp: actual=2.379d, expected=2.379d ✓
+    Antwerp → Southampton: actual=2.198d, expected=2.198d ✓
+    Southampton → Durban: actual=18.757d, expected=18.757d ✓
+    Durban → Sohar: actual=12.208d, expected=12.208d ✓
+    Sohar → Kuwait: actual=2.335d, expected=2.335d ✓
+    Kuwait → Dammam: actual=1.211d, expected=1.211d ✓
+    Dammam → Bahrain: actual=2.105d, expected=2.105d ✓
+    Bahrain → Hamad Port: actual=1.400d, expected=1.400d ✓
+    Hamad Port → Abu Dhabi: actual=0.813d, expected=0.813d ✓
+    Abu Dhabi → Jebel Ali: actual=1.267d, expected=1.267d ✓
+  Commitments served by this position:
+    - Antwerp -> Abu Dhabi (Transit: 41.03d)
+    - Antwerp -> Bahrain (Transit: 38.81d)
+    - Antwerp -> Dammam (Transit: 36.71d)
+    - Antwerp -> Durban (Transit: 20.95d)
+    - Antwerp -> Hamad Port (Transit: 40.21d)
+    - Antwerp -> Jebel Ali (Transit: 42.29d)
+    - Antwerp -> Kuwait (Transit: 35.50d)
+    - Antwerp -> Sohar (Transit: 33.16d)
+    - Bremerhaven -> Abu Dhabi (Transit: 43.41d)
+    - Bremerhaven -> Bahrain (Transit: 41.19d)
+    - Bremerhaven -> Dammam (Transit: 39.09d)
+    - Bremerhaven -> Durban (Transit: 23.33d)
+    - Bremerhaven -> Hamad Port (Transit: 42.59d)
+    - Bremerhaven -> Jebel Ali (Transit: 44.67d)
+    - Bremerhaven -> Kuwait (Transit: 37.88d)
+    - Bremerhaven -> Sohar (Transit: 35.54d)
+    - Hamburg -> Abu Dhabi (Transit: 44.12d)
+    - Hamburg -> Bahrain (Transit: 41.91d)
+    - Hamburg -> Dammam (Transit: 39.80d)
+    - Hamburg -> Hamad Port (Transit: 43.31d)
+    - Hamburg -> Jebel Ali (Transit: 45.39d)
+    - Hamburg -> Kuwait (Transit: 38.59d)
+    - Hamburg -> Sohar (Transit: 36.26d)
+    - Southampton -> Abu Dhabi (Transit: 38.83d)
+    - Southampton -> Bahrain (Transit: 36.62d)
+    - Southampton -> Dammam (Transit: 34.51d)
+    - Southampton -> Hamad Port (Transit: 38.02d)
+    - Southampton -> Jebel Ali (Transit: 40.10d)
+    - Southampton -> Kuwait (Transit: 33.30d)
+    - Southampton -> Sohar (Transit: 30.97d)
+
+Position (0, 1) (lane EUMEviaCape):
+  Start day: s=5
+  Duration: 45.882 days
+  Loading ports visited: 5
+  Discharging ports visited: 8
+  #01 Gothenburg                Day-of-Month:  5.00  Time-since-start:   0.00d  Travel-time: 45.88d
+  #02 Bremerhaven               Day-of-Month:  6.92  Time-since-start:   1.92d  Travel-time: 43.96d
+  #03 Antwerp                   Day-of-Month:  9.30  Time-since-start:   4.30d  Travel-time: 41.58d
+  #04 Southampton               Day-of-Month: 11.50  Time-since-start:   6.50d  Travel-time: 39.38d
+  #05 Santander                 Day-of-Month: 13.48  Time-since-start:   8.48d  Travel-time: 37.40d
+  #06 Port Elizabeth            Day-of-Month: 30.52  Time-since-start:  25.52d  Travel-time: 20.36d
+  #07 Durban                    Day-of-Month:  2.74  Time-since-start:  27.74d  Travel-time: 18.15d
+  #08 Sohar                     Day-of-Month: 14.94  Time-since-start:  39.94d  Travel-time:  5.94d
+  #09 Kuwait                    Day-of-Month: 17.28  Time-since-start:  42.28d  Travel-time:  3.60d
+  #10 Bahrain                   Day-of-Month: 18.60  Time-since-start:  43.60d  Travel-time:  2.28d
+  #11 Hamad Port                Day-of-Month: 20.00  Time-since-start:  45.00d  Travel-time:  0.88d
+  #12 Jebel Ali                 Day-of-Month: 20.88  Time-since-start:  45.88d  Travel-time:  0.00d
+  Travel times verification:
+    SOURCE → Gothenburg: alpha=0.000d, expected=0.000d ✓
+    Gothenburg → Bremerhaven: actual=1.922d, expected=1.922d ✓
+    Bremerhaven → Antwerp: actual=2.379d, expected=2.379d ✓
+    Antwerp → Southampton: actual=2.198d, expected=2.198d ✓
+    Southampton → Santander: actual=1.985d, expected=1.985d ✓
+    Santander → Port Elizabeth: actual=17.034d, expected=17.034d ✓
+    Port Elizabeth → Durban: actual=2.218d, expected=2.218d ✓
+    Durban → Sohar: actual=12.208d, expected=12.208d ✓
+    Sohar → Kuwait: actual=2.335d, expected=2.335d ✓
+    Kuwait → Bahrain: actual=1.323d, expected=1.323d ✓
+    Bahrain → Hamad Port: actual=1.400d, expected=1.400d ✓
+    Hamad Port → Jebel Ali: actual=0.880d, expected=0.880d ✓
+  Commitments served by this position:
+    - Antwerp -> Bahrain (Transit: 39.30d)
+    - Antwerp -> Durban (Transit: 23.44d)
+    - Antwerp -> Hamad Port (Transit: 40.70d)
+    - Antwerp -> Jebel Ali (Transit: 41.58d)
+    - Antwerp -> Kuwait (Transit: 37.98d)
+    - Antwerp -> Sohar (Transit: 35.64d)
+    - Bremerhaven -> Bahrain (Transit: 41.68d)
+    - Bremerhaven -> Durban (Transit: 25.81d)
+    - Bremerhaven -> Hamad Port (Transit: 43.08d)
+    - Bremerhaven -> Jebel Ali (Transit: 43.96d)
+    - Bremerhaven -> Kuwait (Transit: 40.36d)
+    - Bremerhaven -> Port Elizabeth (Transit: 23.60d)
+    - Bremerhaven -> Sohar (Transit: 38.02d)
+    - Gothenburg -> Antwerp (Transit: 4.30d)
+    - Santander -> Port Elizabeth (Transit: 17.03d)
+    - Southampton -> Bahrain (Transit: 37.10d)
+    - Southampton -> Hamad Port (Transit: 38.50d)
+    - Southampton -> Jebel Ali (Transit: 39.38d)
+    - Southampton -> Kuwait (Transit: 35.78d)
+    - Southampton -> Sohar (Transit: 33.45d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 10 days
+    (0, 1): s=5
+    (0, 0): s=21
+  Actual minimum spread: 16.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  Southampton: required=12, actual=14.8 (OK)
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [20, 25]
+  Designated positions in range:
+    (0, 0): s=21 (OK)
+  Overall status: OK
+
+C6 Death Position Avoidance:
+  Death range: [27, 30]
+    (0, 0): s=21 (BELOW (safe))
+    (0, 1): s=5 (BELOW (safe))
+  All positions avoid death range
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  Hamburg: window=[20, 28]
+    (0, 0): phi=21.0 (DESIGNATED, OK)
+  Southampton: window=[23, 30]
+    (0, 0): phi=26.3 (DESIGNATED, OK)
+    (0, 1): phi=11.5 (not designated (can be outside))
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Antwerp -> Abu Dhabi: max=80 days
+      (0, 0): 41.0 days (OK)
+  Antwerp -> Bahrain: max=80 days
+      (0, 0): 38.8 days (OK)
+      (0, 1): 39.3 days (OK)
+  Antwerp -> Dammam: max=80 days
+      (0, 0): 36.7 days (OK)
+  Antwerp -> Hamad Port: max=80 days
+      (0, 0): 40.2 days (OK)
+      (0, 1): 40.7 days (OK)
+  Antwerp -> Jebel Ali: max=80 days
+      (0, 0): 42.3 days (OK)
+      (0, 1): 41.6 days (OK)
+  Antwerp -> Kuwait: max=80 days
+      (0, 0): 35.5 days (OK)
+      (0, 1): 38.0 days (OK)
+  Antwerp -> Sohar: max=80 days
+      (0, 0): 33.2 days (OK)
+      (0, 1): 35.6 days (OK)
+  Bremerhaven -> Abu Dhabi: max=80 days
+      (0, 0): 43.4 days (OK)
+  Bremerhaven -> Bahrain: max=80 days
+      (0, 0): 41.2 days (OK)
+      (0, 1): 41.7 days (OK)
+  Bremerhaven -> Dammam: max=80 days
+      (0, 0): 39.1 days (OK)
+  Bremerhaven -> Hamad Port: max=80 days
+      (0, 0): 42.6 days (OK)
+      (0, 1): 43.1 days (OK)
+  Bremerhaven -> Jebel Ali: max=80 days
+      (0, 0): 44.7 days (OK)
+      (0, 1): 44.0 days (OK)
+  Bremerhaven -> Kuwait: max=80 days
+      (0, 0): 37.9 days (OK)
+      (0, 1): 40.4 days (OK)
+  Bremerhaven -> Sohar: max=80 days
+      (0, 0): 35.5 days (OK)
+      (0, 1): 38.0 days (OK)
+  Gothenburg -> Antwerp: max=15 days
+      (0, 1): 4.3 days (OK)
+  Hamburg -> Abu Dhabi: max=80 days
+      (0, 0): 44.1 days (OK)
+  Hamburg -> Bahrain: max=80 days
+      (0, 0): 41.9 days (OK)
+  Hamburg -> Dammam: max=80 days
+      (0, 0): 39.8 days (OK)
+  Hamburg -> Hamad Port: max=80 days
+      (0, 0): 43.3 days (OK)
+  Hamburg -> Jebel Ali: max=80 days
+      (0, 0): 45.4 days (OK)
+  Hamburg -> Kuwait: max=80 days
+      (0, 0): 38.6 days (OK)
+  Hamburg -> Sohar: max=80 days
+      (0, 0): 36.3 days (OK)
+  Southampton -> Abu Dhabi: max=80 days
+      (0, 0): 38.8 days (OK)
+  Southampton -> Bahrain: max=80 days
+      (0, 0): 36.6 days (OK)
+      (0, 1): 37.1 days (OK)
+  Southampton -> Dammam: max=80 days
+      (0, 0): 34.5 days (OK)
+  Southampton -> Hamad Port: max=80 days
+      (0, 0): 38.0 days (OK)
+      (0, 1): 38.5 days (OK)
+  Southampton -> Jebel Ali: max=80 days
+      (0, 0): 40.1 days (OK)
+      (0, 1): 39.4 days (OK)
+  Southampton -> Kuwait: max=80 days
+      (0, 0): 33.3 days (OK)
+      (0, 1): 35.8 days (OK)
+  Southampton -> Sohar: max=80 days
+      (0, 0): 31.0 days (OK)
+      (0, 1): 33.4 days (OK)
+  All transit time constraints satisfied
+
+######################################################################
+Processing trade: FEEU
+######################################################################
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for FEEU...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 6 C2 start spread constraints (min_spread=5)
+Added 12 C3 port spread constraints
+Added 7 C4 start range constraints (range=[20,23], at least 1 position)
+Added 6 C5 death avoidance constraints (range=[25,30])
+Added 20 C7 port window constraints (at least 1 position per port)
+Added 5 C8 loading ports constraints
+Added 9 C9 discharging ports constraints
+Added 42 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 2099 rows, 591 columns and 5880 nonzeros
+Model fingerprint: 0x8bf49300
+Variable types: 84 continuous, 507 integer (462 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [8e-01, 4e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 970 rows and 147 columns
+Presolve time: 0.08s
+Presolved: 1129 rows, 444 columns, 6310 nonzeros
+Variable types: 69 continuous, 375 integer (339 binary)
+Found heuristic solution: objective 178.5722848
+Found heuristic solution: objective 169.3214584
+Found heuristic solution: objective 167.4206391
+
+Root relaxation: objective 1.490326e+02, 360 iterations, 0.01 seconds (0.01 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  149.03263    0  118  167.42064  149.03263  11.0%     -    0s
+H    0     0                     158.6654439  149.03263  6.07%     -    0s
+     0     0  149.22593    0  108  158.66544  149.22593  5.95%     -    0s
+     0     0  149.50190    0   98  158.66544  149.50190  5.78%     -    0s
+     0     0  149.81776    0  101  158.66544  149.81776  5.58%     -    0s
+     0     0  149.96848    0  102  158.66544  149.96848  5.48%     -    0s
+     0     0  150.38247    0  151  158.66544  150.38247  5.22%     -    0s
+     0     0  152.68783    0  161  158.66544  152.68783  3.77%     -    0s
+     0     0  152.68783    0  169  158.66544  152.68783  3.77%     -    0s
+     0     0  152.69008    0  169  158.66544  152.69008  3.77%     -    0s
+     0     0  153.32403    0  170  158.66544  153.32403  3.37%     -    0s
+     0     0  153.63176    0  150  158.66544  153.63176  3.17%     -    0s
+     0     2  153.63176    0  150  158.66544  153.63176  3.17%     -    0s
+H   66    57                     157.7999263  153.63176  2.64%  25.6    0s
+H  106    83                     156.6811824  153.63176  1.95%  23.9    0s
+
+Cutting planes:
+  Learned: 8
+  Gomory: 2
+  Cover: 10
+  Implied bound: 105
+  Clique: 3
+  MIR: 56
+  StrongCG: 1
+  Flow cover: 27
+  Zero half: 32
+  RLT: 17
+  Relax-and-lift: 21
+  BQP: 1
+
+Explored 239 nodes (5765 simplex iterations) in 0.53 seconds (0.38 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 6: 156.681 157.8 158.665 ... 178.572
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.566811823801e+02, best bound 1.566811823801e+02, gap 0.0000%
+Objective value: 156.681
+Solver Runtime: 0.53s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane FEEUviaCape):
+  Start day: s=10
+  Duration: 42.315 days
+  Loading ports visited: 3
+  Discharging ports visited: 3
+  #01 Hitachinaka               Day-of-Month: 10.00  Time-since-start:   0.00d  Travel-time: 38.57d
+  #02 Omaezaki                  Day-of-Month: 11.43  Time-since-start:   1.43d  Travel-time: 37.14d
+  #03 Kobe                      Day-of-Month: 13.37  Time-since-start:   3.37d  Travel-time: 35.21d
+  #04 Amsterdam                 Day-of-Month: 18.57  Time-since-start:  38.57d  Travel-time:  0.00d
+  #05 Newcastle                 Day-of-Month: 20.39  Time-since-start:  40.39d  Travel-time: -1.82d
+  #06 Bremerhaven               Day-of-Month: 22.32  Time-since-start:  42.32d  Travel-time: -3.74d
+  Travel times verification:
+    SOURCE → Hitachinaka: alpha=0.000d, expected=0.000d ✓
+    Hitachinaka → Omaezaki: actual=1.434d, expected=1.434d ✓
+    Omaezaki → Kobe: actual=1.933d, expected=1.933d ✓
+    Kobe → Amsterdam: actual=35.205d, expected=35.205d ✓
+    Amsterdam → Newcastle: actual=1.818d, expected=1.818d ✓
+    Newcastle → Bremerhaven: actual=1.924d, expected=1.924d ✓
+  Commitments served by this position:
+    - Hitachinaka -> Amsterdam (Transit: 38.57d)
+    - Hitachinaka -> Newcastle (Transit: 40.39d)
+    - Kobe -> Amsterdam (Transit: 35.21d)
+    - Kobe -> Newcastle (Transit: 37.02d)
+    - Omaezaki -> Bremerhaven (Transit: 40.88d)
+
+Position (0, 1) (lane FEEUviaCape):
+  Start day: s=2
+  Duration: 50.732 days
+  Loading ports visited: 2
+  Discharging ports visited: 4
+  #01 Omaezaki                  Day-of-Month:  2.00  Time-since-start:   0.00d  Travel-time: 50.73d
+  #02 Taicang                   Day-of-Month:  5.73  Time-since-start:   3.73d  Travel-time: 47.01d
+  #03 Djen-Djen                 Day-of-Month: 12.77  Time-since-start:  40.77d  Travel-time:  9.96d
+  #04 Barcelona                 Day-of-Month: 14.74  Time-since-start:  42.74d  Travel-time:  8.00d
+  #05 Bristol                   Day-of-Month: 20.15  Time-since-start:  48.15d  Travel-time:  2.58d
+  #06 Zeebrugge                 Day-of-Month: 22.73  Time-since-start:  50.73d  Travel-time:  0.00d
+  Travel times verification:
+    SOURCE → Omaezaki: alpha=0.000d, expected=0.000d ✓
+    Omaezaki → Taicang: actual=3.726d, expected=3.726d ✓
+    Taicang → Djen-Djen: actual=37.049d, expected=37.049d ✓
+    Djen-Djen → Barcelona: actual=1.961d, expected=1.961d ✓
+    Barcelona → Bristol: actual=5.412d, expected=5.412d ✓
+    Bristol → Zeebrugge: actual=2.585d, expected=2.585d ✓
+  Commitments served by this position:
+    - Omaezaki -> Zeebrugge (Transit: 50.73d)
+    - Taicang -> Barcelona (Transit: 39.01d)
+    - Taicang -> Bristol (Transit: 44.42d)
+    - Taicang -> Djen-Djen (Transit: 37.05d)
+    - Taicang -> Zeebrugge (Transit: 47.01d)
+
+Position (0, 2) (lane FEEUviaCape):
+  Start day: s=20
+  Duration: 63.634 days
+  Loading ports visited: 5
+  Discharging ports visited: 8
+  #01 Hitachinaka               Day-of-Month: 20.00  Time-since-start:   0.00d  Travel-time: 45.02d
+  #02 Yokohama                  Day-of-Month: 21.31  Time-since-start:   1.31d  Travel-time: 43.71d
+  #03 Omaezaki                  Day-of-Month: 22.08  Time-since-start:   2.08d  Travel-time: 42.94d
+  #04 Kobe                      Day-of-Month: 24.01  Time-since-start:   4.01d  Travel-time: 41.01d
+  #05 Taicang                   Day-of-Month: 26.78  Time-since-start:   6.78d  Travel-time: 38.24d
+  #06 Valletta                  Day-of-Month:  5.02  Time-since-start:  45.02d  Travel-time:  0.00d
+  #07 Livorno                   Day-of-Month:  7.60  Time-since-start:  47.60d  Travel-time: -2.57d
+  #08 Barcelona                 Day-of-Month: 10.20  Time-since-start:  50.20d  Travel-time: -5.18d
+  #09 Bristol                   Day-of-Month: 15.61  Time-since-start:  55.61d  Travel-time: -10.59d
+  #10 Zeebrugge                 Day-of-Month: 18.19  Time-since-start:  58.19d  Travel-time: -13.17d
+  #11 Amsterdam                 Day-of-Month: 19.89  Time-since-start:  59.89d  Travel-time: -14.87d
+  #12 Newcastle                 Day-of-Month: 21.71  Time-since-start:  61.71d  Travel-time: -16.69d
+  #13 Bremerhaven               Day-of-Month: 23.63  Time-since-start:  63.63d  Travel-time: -18.61d
+  Travel times verification:
+    SOURCE → Hitachinaka: alpha=0.000d, expected=0.000d ✓
+    Hitachinaka → Yokohama: actual=1.309d, expected=1.309d ✓
+    Yokohama → Omaezaki: actual=0.769d, expected=0.769d ✓
+    Omaezaki → Kobe: actual=1.933d, expected=1.933d ✓
+    Kobe → Taicang: actual=2.765d, expected=2.765d ✓
+    Taicang → Valletta: actual=38.245d, expected=38.245d ✓
+    Valletta → Livorno: actual=2.574d, expected=2.574d ✓
+    Livorno → Barcelona: actual=2.603d, expected=2.603d ✓
+    Barcelona → Bristol: actual=5.412d, expected=5.412d ✓
+    Bristol → Zeebrugge: actual=2.585d, expected=2.585d ✓
+    Zeebrugge → Amsterdam: actual=1.697d, expected=1.697d ✓
+    Amsterdam → Newcastle: actual=1.818d, expected=1.818d ✓
+    Newcastle → Bremerhaven: actual=1.924d, expected=1.924d ✓
+  Commitments served by this position:
+    - Hitachinaka -> Amsterdam (Transit: 59.89d)
+    - Hitachinaka -> Newcastle (Transit: 61.71d)
+    - Kobe -> Amsterdam (Transit: 55.88d)
+    - Kobe -> Newcastle (Transit: 57.70d)
+    - Kobe -> Valletta (Transit: 41.01d)
+    - Omaezaki -> Bremerhaven (Transit: 61.56d)
+    - Omaezaki -> Livorno (Transit: 45.52d)
+    - Omaezaki -> Zeebrugge (Transit: 56.12d)
+    - Taicang -> Barcelona (Transit: 43.42d)
+    - Taicang -> Bristol (Transit: 48.83d)
+    - Taicang -> Livorno (Transit: 40.82d)
+    - Taicang -> Zeebrugge (Transit: 51.42d)
+    - Yokohama -> Valletta (Transit: 43.71d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 5 days
+    (0, 1): s=2
+    (0, 0): s=10
+    (0, 2): s=20
+  Actual minimum spread: 8.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  Hitachinaka: required=10, actual=10.0 (OK)
+  Taicang: required=8, actual=21.1 (OK)
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [20, 23]
+  Designated positions in range:
+    (0, 2): s=20 (OK)
+  Overall status: OK
+
+C6 Death Position Avoidance:
+  Death range: [25, 30]
+    (0, 0): s=10 (BELOW (safe))
+    (0, 1): s=2 (BELOW (safe))
+    (0, 2): s=20 (BELOW (safe))
+  All positions avoid death range
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  Hitachinaka: window=[20, 30]
+    (0, 0): phi=10.0 (not designated (can be outside))
+    (0, 2): phi=20.0 (DESIGNATED, OK)
+  Taicang: window=[25, 30]
+    (0, 1): phi=5.7 (not designated (can be outside))
+    (0, 2): phi=26.8 (DESIGNATED, OK)
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Hitachinaka -> Amsterdam: max=80 days
+      (0, 0): 38.6 days (OK)
+      (0, 2): 59.9 days (OK)
+  Hitachinaka -> Newcastle: max=80 days
+      (0, 0): 40.4 days (OK)
+      (0, 2): 61.7 days (OK)
+  Kobe -> Amsterdam: max=80 days
+      (0, 0): 35.2 days (OK)
+      (0, 2): 55.9 days (OK)
+  Kobe -> Newcastle: max=80 days
+      (0, 0): 37.0 days (OK)
+      (0, 2): 57.7 days (OK)
+  Kobe -> Valletta: max=80 days
+      (0, 2): 41.0 days (OK)
+  Omaezaki -> Bremerhaven: max=80 days
+      (0, 0): 40.9 days (OK)
+      (0, 2): 61.6 days (OK)
+  Omaezaki -> Livorno: max=80 days
+      (0, 2): 45.5 days (OK)
+  Omaezaki -> Zeebrugge: max=80 days
+      (0, 1): 50.7 days (OK)
+      (0, 2): 56.1 days (OK)
+  Taicang -> Barcelona: max=80 days
+      (0, 1): 39.0 days (OK)
+      (0, 2): 43.4 days (OK)
+  Taicang -> Bristol: max=80 days
+      (0, 1): 44.4 days (OK)
+      (0, 2): 48.8 days (OK)
+  Taicang -> Djen-Djen: max=80 days
+      (0, 1): 37.0 days (OK)
+  Taicang -> Livorno: max=80 days
+      (0, 2): 40.8 days (OK)
+  Taicang -> Zeebrugge: max=80 days
+      (0, 1): 47.0 days (OK)
+      (0, 2): 51.4 days (OK)
+  Yokohama -> Valletta: max=80 days
+      (0, 2): 43.7 days (OK)
+  All transit time constraints satisfied
+
+######################################################################
+Processing trade: FEUS
+######################################################################
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for FEUS...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 12 C2 start spread constraints (min_spread=7)
+Added 12 C3 port spread constraints
+Added 9 C4 start range constraints (range=[21,23], at least 1 position)
+Added 8 C5 death avoidance constraints (range=[25,30])
+Added 39 C7 port window constraints (at least 1 position per port)
+Added 10 C8 loading ports constraints
+Added 7 C9 discharging ports constraints
+Added 160 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 4208 rows, 1060 columns and 11456 nonzeros
+Model fingerprint: 0x359d8446
+Variable types: 128 continuous, 932 integer (864 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [8e-01, 3e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 2244 rows and 234 columns
+Presolve time: 0.11s
+Presolved: 1964 rows, 826 columns, 11065 nonzeros
+Variable types: 104 continuous, 722 integer (664 binary)
+
+Root relaxation: objective 1.439680e+02, 768 iterations, 0.02 seconds (0.02 work units)
+Another try with MIP start
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  143.96799    0  236          -  143.96799      -     -    0s
+     0     0  146.51154    0  299          -  146.51154      -     -    0s
+     0     0  146.51291    0  299          -  146.51291      -     -    0s
+     0     0  149.27336    0  303          -  149.27336      -     -    0s
+     0     0  149.72714    0  310          -  149.72714      -     -    0s
+     0     0  149.73393    0  312          -  149.73393      -     -    0s
+     0     0  149.73470    0  312          -  149.73470      -     -    0s
+     0     0  150.51269    0  328          -  150.51269      -     -    0s
+     0     0  150.54598    0  330          -  150.54598      -     -    0s
+     0     0  150.54815    0  330          -  150.54815      -     -    0s
+     0     0  150.54870    0  332          -  150.54870      -     -    0s
+     0     0  151.34401    0  306          -  151.34401      -     -    0s
+     0     0  151.35988    0  323          -  151.35988      -     -    0s
+     0     0  151.36788    0  342          -  151.36788      -     -    0s
+     0     0  151.39205    0  333          -  151.39205      -     -    0s
+     0     0  151.41238    0  337          -  151.41238      -     -    0s
+     0     0  151.41318    0  351          -  151.41318      -     -    0s
+H    0     0                     185.3384581  151.41318  18.3%     -    0s
+     0     0  151.66268    0  296  185.33846  151.66268  18.2%     -    0s
+     0     0  151.70422    0  327  185.33846  151.70422  18.1%     -    0s
+     0     0  151.77133    0  341  185.33846  151.77133  18.1%     -    0s
+     0     0  151.77197    0  341  185.33846  151.77197  18.1%     -    0s
+H    0     0                     166.5967373  152.40036  8.52%     -    0s
+     0     0  152.40036    0  331  166.59674  152.40036  8.52%     -    0s
+H    0     0                     165.7018165  152.40046  8.03%     -    0s
+     0     0  152.41932    0  325  165.70182  152.41932  8.02%     -    0s
+     0     0  152.41962    0  329  165.70182  152.41962  8.02%     -    0s
+     0     0  152.95918    0  346  165.70182  152.95918  7.69%     -    0s
+     0     0  153.10975    0  349  165.70182  153.10975  7.60%     -    0s
+     0     0  153.15366    0  346  165.70182  153.15366  7.57%     -    0s
+     0     0  153.15428    0  340  165.70182  153.15428  7.57%     -    0s
+     0     0  153.23900    0  332  165.70182  153.23900  7.52%     -    0s
+     0     0  153.24341    0  342  165.70182  153.24341  7.52%     -    0s
+     0     0  153.27444    0  341  165.70182  153.27444  7.50%     -    0s
+     0     0  153.28293    0  339  165.70182  153.28293  7.49%     -    0s
+     0     0  153.28801    0  339  165.70182  153.28801  7.49%     -    0s
+H    0     0                     162.6197744  153.28864  5.74%     -    0s
+     0     0  153.28864    0  342  162.61977  153.28864  5.74%     -    0s
+     0     0  153.33116    0  353  162.61977  153.33116  5.71%     -    0s
+     0     0  153.33475    0  352  162.61977  153.33475  5.71%     -    0s
+     0     0  153.35521    0  341  162.61977  153.35521  5.70%     -    0s
+     0     0  153.35586    0  351  162.61977  153.35586  5.70%     -    0s
+     0     0  153.42202    0  354  162.61977  153.42202  5.66%     -    0s
+     0     0  153.42334    0  356  162.61977  153.42334  5.66%     -    0s
+     0     0  153.56441    0  365  162.61977  153.56441  5.57%     -    1s
+     0     0  153.57557    0  357  162.61977  153.57557  5.56%     -    1s
+     0     0  153.57838    0  360  162.61977  153.57838  5.56%     -    1s
+     0     0  153.57848    0  362  162.61977  153.57848  5.56%     -    1s
+     0     0  153.68856    0  344  162.61977  153.68856  5.49%     -    1s
+     0     0  153.70389    0  363  162.61977  153.70389  5.48%     -    1s
+     0     0  153.70502    0  364  162.61977  153.70502  5.48%     -    1s
+     0     0  153.70881    0  373  162.61977  153.70881  5.48%     -    1s
+     0     0  153.71482    0  364  162.61977  153.71482  5.48%     -    1s
+     0     0  153.71502    0  352  162.61977  153.71502  5.48%     -    1s
+     0     0  153.73448    0  364  162.61977  153.73448  5.46%     -    1s
+     0     0  153.73591    0  350  162.61977  153.73591  5.46%     -    1s
+     0     2  153.73591    0  341  162.61977  153.73591  5.46%     -    1s
+H  267   191                     162.5808565  154.63987  4.88%   158    2s
+H  277   208                     162.4335535  154.63987  4.80%   158    2s
+H  288   208                     161.5960691  154.63987  4.30%   158    2s
+  2230   231  161.19732   12  188  161.59607  159.78041  1.12%  96.7    5s
+
+Cutting planes:
+  Learned: 22
+  Gomory: 3
+  Cover: 36
+  Implied bound: 204
+  Clique: 14
+  MIR: 91
+  StrongCG: 8
+  Flow cover: 51
+  GUB cover: 1
+  Inf proof: 1
+  Zero half: 77
+  RLT: 76
+  Relax-and-lift: 35
+  BQP: 25
+
+Explored 2829 nodes (260134 simplex iterations) in 5.46 seconds (7.83 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 7: 161.596 162.434 162.581 ... 185.338
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.615960690883e+02, best bound 1.615960690883e+02, gap 0.0000%
+Objective value: 161.596
+Solver Runtime: 5.46s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane FEUS):
+  Start day: s=22
+  Duration: 37.183 days
+  Loading ports visited: 5
+  Discharging ports visited: 3
+  #01 Incheon                   Day-of-Month: 22.00  Time-since-start:   0.00d  Travel-time: 30.34d
+  #02 Masan                     Day-of-Month: 24.38  Time-since-start:   2.38d  Travel-time: 27.96d
+  #03 Kobe                      Day-of-Month: 27.35  Time-since-start:   5.35d  Travel-time: 24.98d
+  #04 Kawasaki                  Day-of-Month: 29.10  Time-since-start:   7.10d  Travel-time: 23.24d
+  #05 Kingston (Jam)            Day-of-Month: 22.34  Time-since-start:  30.34d  Travel-time:  0.00d
+  #06 Brunswick                 Day-of-Month: 26.59  Time-since-start:  34.59d  Travel-time: -4.26d
+  #07 Baltimore                 Day-of-Month: 29.18  Time-since-start:  37.18d  Travel-time: -6.85d
+  Travel times verification:
+    SOURCE → Incheon: alpha=0.000d, expected=0.000d ✓
+    Incheon → Masan: actual=2.376d, expected=2.376d ✓
+    Masan → Kobe: actual=2.976d, expected=2.976d ✓
+    Kobe → Kawasaki: actual=1.746d, expected=1.746d ✓
+    Kawasaki → Kingston (Jam): actual=23.238d, expected=23.238d ✓
+    Kingston (Jam) → Brunswick: actual=4.256d, expected=4.256d ✓
+    Brunswick → Baltimore: actual=2.591d, expected=2.591d ✓
+  Commitments served by this position:
+    - Incheon -> Baltimore (Transit: 37.18d)
+    - Incheon -> Brunswick (Transit: 34.59d)
+    - Kawasaki -> Baltimore (Transit: 30.09d)
+    - Kawasaki -> Brunswick (Transit: 27.49d)
+    - Kawasaki -> Kingston (Jam) (Transit: 23.24d)
+    - Kobe -> Baltimore (Transit: 31.83d)
+    - Kobe -> Kingston (Jam) (Transit: 24.98d)
+    - Masan -> Baltimore (Transit: 34.81d)
+    - Masan -> Brunswick (Transit: 32.22d)
+    - Masan -> Kingston (Jam) (Transit: 27.96d)
+
+Position (0, 1) (lane FEUS):
+  Start day: s=15
+  Duration: 44.124 days
+  Loading ports visited: 6
+  Discharging ports visited: 5
+  #01 Taicang                   Day-of-Month: 15.00  Time-since-start:   0.00d  Travel-time: 35.02d
+  #02 Kobe                      Day-of-Month: 18.49  Time-since-start:   3.49d  Travel-time: 31.53d
+  #03 Nagoya                    Day-of-Month: 19.89  Time-since-start:   4.89d  Travel-time: 30.13d
+  #04 Gamagori                  Day-of-Month: 20.73  Time-since-start:   5.73d  Travel-time: 29.29d
+  #05 Kawasaki                  Day-of-Month: 21.97  Time-since-start:   6.97d  Travel-time: 28.06d
+  #06 Kingston (Jam)            Day-of-Month: 15.20  Time-since-start:  30.20d  Travel-time:  4.82d
+  #07 FreeportTx                Day-of-Month: 20.02  Time-since-start:  35.02d  Travel-time:  0.00d
+  #08 Mobile                    Day-of-Month: 22.23  Time-since-start:  37.23d  Travel-time: -2.21d
+  #09 Jacksonville              Day-of-Month: 25.79  Time-since-start:  40.79d  Travel-time: -5.77d
+  #10 Baltimore                 Day-of-Month: 29.12  Time-since-start:  44.12d  Travel-time: -9.10d
+  Travel times verification:
+    SOURCE → Taicang: alpha=0.000d, expected=0.000d ✓
+    Taicang → Kobe: actual=3.488d, expected=3.488d ✓
+    Kobe → Nagoya: actual=1.402d, expected=1.402d ✓
+    Nagoya → Gamagori: actual=0.844d, expected=0.844d ✓
+    Gamagori → Kawasaki: actual=1.233d, expected=1.233d ✓
+    Kawasaki → Kingston (Jam): actual=23.238d, expected=23.238d ✓
+    Kingston (Jam) → FreeportTx: actual=4.818d, expected=4.818d ✓
+    FreeportTx → Mobile: actual=2.206d, expected=2.206d ✓
+    Mobile → Jacksonville: actual=3.563d, expected=3.563d ✓
+    Jacksonville → Baltimore: actual=3.334d, expected=3.334d ✓
+  Commitments served by this position:
+    - Gamagori -> Baltimore (Transit: 38.39d)
+    - Gamagori -> FreeportTx (Transit: 29.29d)
+    - Gamagori -> Jacksonville (Transit: 35.06d)
+    - Kawasaki -> Baltimore (Transit: 37.16d)
+    - Kawasaki -> FreeportTx (Transit: 28.06d)
+    - Kawasaki -> Kingston (Jam) (Transit: 23.24d)
+    - Kingston (Jam) -> Baltimore (Transit: 13.92d)
+    - Kingston (Jam) -> Jacksonville (Transit: 10.59d)
+    - Kobe -> FreeportTx (Transit: 31.53d)
+    - Kobe -> Jacksonville (Transit: 37.30d)
+    - Kobe -> Kingston (Jam) (Transit: 26.72d)
+    - Nagoya -> Baltimore (Transit: 39.23d)
+    - Nagoya -> FreeportTx (Transit: 30.13d)
+    - Nagoya -> Jacksonville (Transit: 35.90d)
+    - Nagoya -> Kingston (Jam) (Transit: 25.31d)
+    - Taicang -> Baltimore (Transit: 44.12d)
+    - Taicang -> FreeportTx (Transit: 35.02d)
+    - Taicang -> Jacksonville (Transit: 40.79d)
+    - Taicang -> Kingston (Jam) (Transit: 30.20d)
+    - Taicang -> Mobile (Transit: 37.23d)
+
+Position (0, 2) (lane FEUS):
+  Start day: s=1
+  Duration: 34.996 days
+  Loading ports visited: 3
+  Discharging ports visited: 3
+  #01 Taicang                   Day-of-Month:  1.00  Time-since-start:   0.00d  Travel-time:  0.00d
+  #02 Masan                     Day-of-Month:  3.72  Time-since-start:   2.72d  Travel-time:  0.00d
+  #03 Kingston (Jam)            Day-of-Month: 28.97  Time-since-start:  27.97d  Travel-time:  0.00d
+  #04 FreeportTx                Day-of-Month:  3.79  Time-since-start:  32.79d  Travel-time:  0.00d
+  #05 Mobile                    Day-of-Month:  6.00  Time-since-start:  35.00d  Travel-time:  0.00d
+  Travel times verification:
+    SOURCE → Taicang: alpha=0.000d, expected=0.000d ✓
+    Taicang → Masan: actual=2.725d, expected=2.725d ✓
+    Masan → Kingston (Jam): actual=25.248d, expected=25.248d ✓
+    Kingston (Jam) → FreeportTx: actual=4.818d, expected=4.818d ✓
+    FreeportTx → Mobile: actual=2.206d, expected=2.206d ✓
+  Commitments served by this position:
+    - Kingston (Jam) -> FreeportTx (Transit: 4.82d)
+    - Masan -> FreeportTx (Transit: 30.07d)
+    - Masan -> Kingston (Jam) (Transit: 25.25d)
+    - Taicang -> FreeportTx (Transit: 32.79d)
+    - Taicang -> Kingston (Jam) (Transit: 27.97d)
+    - Taicang -> Mobile (Transit: 35.00d)
+
+Position (0, 3) (lane FEUS):
+  Start day: s=8
+  Duration: 45.293 days
+  Loading ports visited: 6
+  Discharging ports visited: 5
+  #01 Incheon                   Day-of-Month:  8.00  Time-since-start:   0.00d  Travel-time:  7.75d
+  #02 Masan                     Day-of-Month: 10.38  Time-since-start:   2.38d  Travel-time:  5.38d
+  #03 Hiroshima                 Day-of-Month: 13.00  Time-since-start:   5.00d  Travel-time:  2.76d
+  #04 Mizushima                 Day-of-Month: 14.50  Time-since-start:   6.50d  Travel-time:  1.25d
+  #05 Kobe                      Day-of-Month: 15.75  Time-since-start:   7.75d  Travel-time:  0.00d
+  #06 Gamagori                  Day-of-Month: 17.10  Time-since-start:   9.10d  Travel-time: -1.35d
+  #07 FreeportTx                Day-of-Month: 12.85  Time-since-start:  34.85d  Travel-time: -27.10d
+  #08 Jacksonville              Day-of-Month: 17.14  Time-since-start:  39.14d  Travel-time: -31.38d
+  #09 Brunswick                 Day-of-Month: 18.84  Time-since-start:  40.84d  Travel-time: -33.09d
+  #10 Baltimore                 Day-of-Month: 21.43  Time-since-start:  43.43d  Travel-time: -35.68d
+  #11 New York                  Day-of-Month: 23.29  Time-since-start:  45.29d  Travel-time: -37.54d
+  Travel times verification:
+    SOURCE → Incheon: alpha=0.000d, expected=0.000d ✓
+    Incheon → Masan: actual=2.376d, expected=2.376d ✓
+    Masan → Hiroshima: actual=2.620d, expected=2.620d ✓
+    Hiroshima → Mizushima: actual=1.504d, expected=1.504d ✓
+    Mizushima → Kobe: actual=1.253d, expected=1.253d ✓
+    Kobe → Gamagori: actual=1.351d, expected=1.351d ✓
+    Gamagori → FreeportTx: actual=25.746d, expected=25.746d ✓
+    FreeportTx → Jacksonville: actual=4.288d, expected=4.288d ✓
+    Jacksonville → Brunswick: actual=1.704d, expected=1.704d ✓
+    Brunswick → Baltimore: actual=2.591d, expected=2.591d ✓
+    Baltimore → New York: actual=1.860d, expected=1.860d ✓
+  Commitments served by this position:
+    - Gamagori -> Baltimore (Transit: 34.33d)
+    - Gamagori -> FreeportTx (Transit: 25.75d)
+    - Gamagori -> Jacksonville (Transit: 30.03d)
+    - Hiroshima -> Baltimore (Transit: 38.44d)
+    - Hiroshima -> FreeportTx (Transit: 29.85d)
+    - Hiroshima -> Jacksonville (Transit: 34.14d)
+    - Incheon -> Baltimore (Transit: 43.43d)
+    - Incheon -> Brunswick (Transit: 40.84d)
+    - Incheon -> FreeportTx (Transit: 34.85d)
+    - Incheon -> Jacksonville (Transit: 39.14d)
+    - Incheon -> New York (Transit: 45.29d)
+    - Kobe -> Baltimore (Transit: 35.68d)
+    - Kobe -> FreeportTx (Transit: 27.10d)
+    - Kobe -> Jacksonville (Transit: 31.38d)
+    - Masan -> Baltimore (Transit: 41.06d)
+    - Masan -> Brunswick (Transit: 38.47d)
+    - Masan -> FreeportTx (Transit: 32.47d)
+    - Masan -> Jacksonville (Transit: 36.76d)
+    - Masan -> New York (Transit: 42.92d)
+    - Mizushima -> Baltimore (Transit: 36.93d)
+    - Mizushima -> FreeportTx (Transit: 28.35d)
+    - Mizushima -> Jacksonville (Transit: 32.64d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 7 days
+    (0, 2): s=1
+    (0, 3): s=8
+    (0, 1): s=15
+    (0, 0): s=22
+  Actual minimum spread: 7.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  Taicang: required=8, actual=14.0 (OK)
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [21, 23]
+  Designated positions in range:
+    (0, 0): s=22 (OK)
+  Overall status: OK
+
+C6 Death Position Avoidance:
+  Death range: [25, 30]
+    (0, 0): s=22 (BELOW (safe))
+    (0, 1): s=15 (BELOW (safe))
+    (0, 2): s=1 (BELOW (safe))
+    (0, 3): s=8 (BELOW (safe))
+  All positions avoid death range
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  Kobe: window=[25, 28]
+    (0, 0): phi=27.4 (DESIGNATED, OK)
+    (0, 1): phi=18.5 (not designated (can be outside))
+    (0, 3): phi=15.8 (not designated (can be outside))
+  Masan: window=[23, 25]
+    (0, 0): phi=24.4 (DESIGNATED, OK)
+    (0, 2): phi=3.7 (not designated (can be outside))
+    (0, 3): phi=10.4 (not designated (can be outside))
+  Taicang: window=[10, 15]
+    (0, 1): phi=15.0 (DESIGNATED, OK)
+    (0, 2): phi=1.0 (not designated (can be outside))
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Gamagori -> Baltimore: max=55 days
+      (0, 1): 38.4 days (OK)
+      (0, 3): 34.3 days (OK)
+  Gamagori -> FreeportTx: max=50 days
+      (0, 1): 29.3 days (OK)
+      (0, 3): 25.7 days (OK)
+  Gamagori -> Jacksonville: max=50 days
+      (0, 1): 35.1 days (OK)
+      (0, 3): 30.0 days (OK)
+  Hiroshima -> Baltimore: max=55 days
+      (0, 3): 38.4 days (OK)
+  Hiroshima -> FreeportTx: max=50 days
+      (0, 3): 29.9 days (OK)
+  Hiroshima -> Jacksonville: max=50 days
+      (0, 3): 34.1 days (OK)
+  Incheon -> Baltimore: max=55 days
+      (0, 0): 37.2 days (OK)
+      (0, 3): 43.4 days (OK)
+  Incheon -> Brunswick: max=50 days
+      (0, 0): 34.6 days (OK)
+      (0, 3): 40.8 days (OK)
+  Incheon -> FreeportTx: max=50 days
+      (0, 3): 34.8 days (OK)
+  Incheon -> Jacksonville: max=50 days
+      (0, 3): 39.1 days (OK)
+  Incheon -> New York: max=60 days
+      (0, 3): 45.3 days (OK)
+  Kawasaki -> Baltimore: max=55 days
+      (0, 0): 30.1 days (OK)
+      (0, 1): 37.2 days (OK)
+  Kawasaki -> Brunswick: max=50 days
+      (0, 0): 27.5 days (OK)
+  Kawasaki -> FreeportTx: max=50 days
+      (0, 1): 28.1 days (OK)
+  Kawasaki -> Kingston (Jam): max=50 days
+      (0, 0): 23.2 days (OK)
+      (0, 1): 23.2 days (OK)
+  Kingston (Jam) -> Baltimore: max=30 days
+      (0, 1): 13.9 days (OK)
+  Kingston (Jam) -> FreeportTx: max=30 days
+      (0, 2): 4.8 days (OK)
+  Kingston (Jam) -> Jacksonville: max=30 days
+      (0, 1): 10.6 days (OK)
+  Kobe -> Baltimore: max=55 days
+      (0, 0): 31.8 days (OK)
+      (0, 3): 35.7 days (OK)
+  Kobe -> FreeportTx: max=50 days
+      (0, 1): 31.5 days (OK)
+      (0, 3): 27.1 days (OK)
+  Kobe -> Jacksonville: max=50 days
+      (0, 1): 37.3 days (OK)
+      (0, 3): 31.4 days (OK)
+  Kobe -> Kingston (Jam): max=50 days
+      (0, 0): 25.0 days (OK)
+      (0, 1): 26.7 days (OK)
+  Masan -> Baltimore: max=55 days
+      (0, 0): 34.8 days (OK)
+      (0, 3): 41.1 days (OK)
+  Masan -> Brunswick: max=50 days
+      (0, 0): 32.2 days (OK)
+      (0, 3): 38.5 days (OK)
+  Masan -> FreeportTx: max=50 days
+      (0, 2): 30.1 days (OK)
+      (0, 3): 32.5 days (OK)
+  Masan -> Jacksonville: max=50 days
+      (0, 3): 36.8 days (OK)
+  Masan -> Kingston (Jam): max=50 days
+      (0, 0): 28.0 days (OK)
+      (0, 2): 25.2 days (OK)
+  Masan -> New York: max=60 days
+      (0, 3): 42.9 days (OK)
+  Mizushima -> Baltimore: max=50 days
+      (0, 3): 36.9 days (OK)
+  Mizushima -> FreeportTx: max=50 days
+      (0, 3): 28.3 days (OK)
+  Mizushima -> Jacksonville: max=50 days
+      (0, 3): 32.6 days (OK)
+  Nagoya -> Baltimore: max=55 days
+      (0, 1): 39.2 days (OK)
+  Nagoya -> FreeportTx: max=50 days
+      (0, 1): 30.1 days (OK)
+  Nagoya -> Jacksonville: max=50 days
+      (0, 1): 35.9 days (OK)
+  Nagoya -> Kingston (Jam): max=50 days
+      (0, 1): 25.3 days (OK)
+  Taicang -> Baltimore: max=55 days
+      (0, 1): 44.1 days (OK)
+  Taicang -> FreeportTx: max=50 days
+      (0, 1): 35.0 days (OK)
+      (0, 2): 32.8 days (OK)
+  Taicang -> Jacksonville: max=50 days
+      (0, 1): 40.8 days (OK)
+  Taicang -> Kingston (Jam): max=50 days
+      (0, 1): 30.2 days (OK)
+      (0, 2): 28.0 days (OK)
+  Taicang -> Mobile: max=70 days
+      (0, 1): 37.2 days (OK)
+      (0, 2): 35.0 days (OK)
+  All transit time constraints satisfied
+
+######################################################################
+Processing trade: MIAF
+######################################################################
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for MIAF...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 2 C2 start spread constraints (min_spread=10)
+Added 4 C3 port spread constraints
+Added 5 C4 start range constraints (range=[25,28], at least 1 position)
+Added 14 C7 port window constraints (at least 1 position per port)
+Added 5 C8 loading ports constraints
+Added 5 C9 discharging ports constraints
+Added 20 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 527 rows, 211 columns and 1536 nonzeros
+Model fingerprint: 0xd3f57555
+Variable types: 36 continuous, 175 integer (155 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [9e-01, 3e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 466 rows and 169 columns
+Presolve time: 0.01s
+Presolved: 61 rows, 42 columns, 214 nonzeros
+Variable types: 18 continuous, 24 integer (16 binary)
+Found heuristic solution: objective 108.8233870
+Found heuristic solution: objective 105.5164374
+Found heuristic solution: objective 104.8902198
+Found heuristic solution: objective 104.6244012
+
+Root relaxation: cutoff, 19 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0     cutoff    0       104.62440  104.62440  0.00%     -    0s
+
+Explored 1 nodes (19 simplex iterations) in 0.01 seconds (0.01 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 4: 104.624 104.89 105.516 108.823 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.046244012230e+02, best bound 1.046244012230e+02, gap 0.0000%
+Objective value: 104.624
+Solver Runtime: 0.01s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane MIAF):
+  Start day: s=26
+  Duration: 47.577 days
+  Loading ports visited: 3
+  Discharging ports visited: 4
+  #01 Mumbai                    Day-of-Month: 26.00  Time-since-start:   0.00d  Travel-time: 17.92d
+  #02 Ennore                    Day-of-Month:  1.64  Time-since-start:   5.64d  Travel-time: 12.29d
+  #03 Durban                    Day-of-Month: 13.92  Time-since-start:  17.92d  Travel-time:  0.00d
+  #04 Kingston (Jam)            Day-of-Month:  4.87  Time-since-start:  38.87d  Travel-time: -20.95d
+  #05 Veracruz                  Day-of-Month:  9.52  Time-since-start:  43.52d  Travel-time: -25.60d
+  #06 Port Arthur               Day-of-Month: 13.58  Time-since-start:  47.58d  Travel-time: -29.66d
+  Travel times verification:
+    SOURCE → Mumbai: alpha=0.000d, expected=0.000d ✓
+    Mumbai → Ennore: actual=5.635d, expected=5.635d ✓
+    Ennore → Durban: actual=12.285d, expected=12.285d ✓
+    Durban → Kingston (Jam): actual=20.951d, expected=20.951d ✓
+    Kingston (Jam) → Veracruz: actual=4.646d, expected=4.646d ✓
+    Veracruz → Port Arthur: actual=4.060d, expected=4.060d ✓
+  Commitments served by this position:
+    - Durban -> Kingston (Jam) (Transit: 20.95d)
+    - Durban -> Veracruz (Transit: 25.60d)
+    - Ennore -> Kingston (Jam) (Transit: 33.24d)
+    - Ennore -> Veracruz (Transit: 37.88d)
+    - Mumbai -> Veracruz (Transit: 43.52d)
+
+Position (0, 1) (lane MIAF):
+  Start day: s=10
+  Duration: 57.047 days
+  Loading ports visited: 5
+  Discharging ports visited: 5
+  #01 Kuwait                    Day-of-Month: 10.00  Time-since-start:   0.00d  Travel-time: 44.14d
+  #02 Pipavav (Victor) Port     Day-of-Month: 14.38  Time-since-start:   4.38d  Travel-time: 39.76d
+  #03 Mumbai                    Day-of-Month: 15.27  Time-since-start:   5.27d  Travel-time: 38.87d
+  #04 Ennore                    Day-of-Month: 20.91  Time-since-start:  10.91d  Travel-time: 33.24d
+  #05 Durban                    Day-of-Month:  3.19  Time-since-start:  23.19d  Travel-time: 20.95d
+  #06 Kingston (Jam)            Day-of-Month: 24.14  Time-since-start:  44.14d  Travel-time:  0.00d
+  #07 Veracruz                  Day-of-Month: 28.79  Time-since-start:  48.79d  Travel-time: -4.65d
+  #08 Port Arthur               Day-of-Month:  2.85  Time-since-start:  52.85d  Travel-time: -8.71d
+  #09 Jacksonville              Day-of-Month:  7.05  Time-since-start:  57.05d  Travel-time: -12.91d
+  Travel times verification:
+    SOURCE → Kuwait: alpha=0.000d, expected=0.000d ✓
+    Kuwait → Pipavav (Victor) Port: actual=4.378d, expected=4.378d ✓
+    Pipavav (Victor) Port → Mumbai: actual=0.892d, expected=0.892d ✓
+    Mumbai → Ennore: actual=5.635d, expected=5.635d ✓
+    Ennore → Durban: actual=12.285d, expected=12.285d ✓
+    Durban → Kingston (Jam): actual=20.951d, expected=20.951d ✓
+    Kingston (Jam) → Veracruz: actual=4.646d, expected=4.646d ✓
+    Veracruz → Port Arthur: actual=4.060d, expected=4.060d ✓
+    Port Arthur → Jacksonville: actual=4.199d, expected=4.199d ✓
+  Commitments served by this position:
+    - Durban -> Kingston (Jam) (Transit: 20.95d)
+    - Durban -> Veracruz (Transit: 25.60d)
+    - Ennore -> Veracruz (Transit: 37.88d)
+    - Kuwait -> Jacksonville (Transit: 57.05d)
+    - Kuwait -> Port Arthur (Transit: 52.85d)
+    - Mumbai -> Veracruz (Transit: 43.52d)
+    - Pipavav (Victor) Port -> Durban (Transit: 18.81d)
+    - Pipavav (Victor) Port -> Kingston (Jam) (Transit: 39.76d)
+    - Pipavav (Victor) Port -> Veracruz (Transit: 44.41d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 10 days
+    (0, 1): s=10
+    (0, 0): s=26
+  Actual minimum spread: 16.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  Ennore: required=10, actual=19.3 (OK)
+  Mumbai: required=10, actual=10.7 (OK)
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [25, 28]
+  Designated positions in range:
+    (0, 0): s=26 (OK)
+  Overall status: OK
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  Ennore: window=[20, 24]
+    (0, 0): phi=1.6 (not designated (can be outside))
+    (0, 1): phi=20.9 (DESIGNATED, OK)
+  Mumbai: window=[25, 28]
+    (0, 0): phi=26.0 (DESIGNATED, OK)
+    (0, 1): phi=15.3 (not designated (can be outside))
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Durban -> Kingston (Jam): max=70 days
+      (0, 0): 21.0 days (OK)
+      (0, 1): 21.0 days (OK)
+  Durban -> Veracruz: max=70 days
+      (0, 0): 25.6 days (OK)
+      (0, 1): 25.6 days (OK)
+  Ennore -> Kingston (Jam): max=70 days
+      (0, 0): 33.2 days (OK)
+  Ennore -> Veracruz: max=70 days
+      (0, 0): 37.9 days (OK)
+      (0, 1): 37.9 days (OK)
+  Kuwait -> Jacksonville: max=70 days
+      (0, 1): 57.0 days (OK)
+  Kuwait -> Port Arthur: max=70 days
+      (0, 1): 52.8 days (OK)
+  Mumbai -> Veracruz: max=70 days
+      (0, 0): 43.5 days (OK)
+      (0, 1): 43.5 days (OK)
+  Pipavav (Victor) Port -> Durban: max=70 days
+      (0, 1): 18.8 days (OK)
+  Pipavav (Victor) Port -> Kingston (Jam): max=70 days
+      (0, 1): 39.8 days (OK)
+  Pipavav (Victor) Port -> Veracruz: max=70 days
+      (0, 1): 44.4 days (OK)
+  All transit time constraints satisfied
+
+######################################################################
+Processing trade: USME
+######################################################################
+Set parameter OutputFlag to value 1
+
+============================================================
+          ***   MIP ROUTE OPTIMIZATION   ***
+============================================================
+Loading data...
+
+Creating model for USME...
+
+Setting up decision variables...
+
+Adding constraints...
+
+Added 2 C2 start spread constraints (min_spread=10)
+Added 4 C3 port spread constraints
+Added 5 C4 start range constraints (range=[20,25], at least 1 position)
+Added 14 C7 port window constraints (at least 1 position per port)
+Added 8 C8 loading ports constraints
+Added 8 C9 discharging ports constraints
+Added 96 C10 max transit time constraints
+
+Optimizing model...
+
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[x86] - Darwin 24.6.0 24G90)
+
+CPU model: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Thread count: 6 physical cores, 12 logical processors, using up to 12 threads
+
+Academic license 2731237 - for non-commercial use only - registered to 66___@eur.nl
+Optimize a model with 2165 rows, 539 columns and 5808 nonzeros
+Model fingerprint: 0xacbc7249
+Variable types: 64 continuous, 475 integer (441 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [7e-01, 4e+01]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 3e+02]
+
+User MIP start did not produce a new incumbent solution
+
+Presolve removed 1967 rows and 428 columns
+Presolve time: 0.01s
+Presolved: 198 rows, 111 columns, 620 nonzeros
+Variable types: 44 continuous, 67 integer (49 binary)
+Found heuristic solution: objective 115.7926339
+Found heuristic solution: objective 115.5794384
+Found heuristic solution: objective 114.7988044
+Found heuristic solution: objective 114.7955266
+
+Root relaxation: objective 1.125525e+02, 80 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  112.55248    0   42  114.79553  112.55248  1.95%     -    0s
+     0     0  112.55248    0   43  114.79553  112.55248  1.95%     -    0s
+H    0     0                     113.8016971  112.55248  1.10%     -    0s
+H    0     0                     113.5463067  112.55248  0.88%     -    0s
+H    0     0                     112.5808505  112.55248  0.03%     -    0s
+
+Cutting planes:
+  Learned: 3
+
+Explored 1 nodes (145 simplex iterations) in 0.03 seconds (0.02 work units)
+Thread count was 12 (of 12 available processors)
+
+Solution count 7: 112.581 113.546 113.802 ... 115.793
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.125808504810e+02, best bound 1.125808504810e+02, gap 0.0000%
+Objective value: 112.581
+Solver Runtime: 0.03s
+MIP Gap: 0.0000%
+
+
+======================================================================
+
+Position (0, 0) (lane USINviaCape):
+  Start day: s=24
+  Duration: 57.804 days
+  Loading ports visited: 6
+  Discharging ports visited: 8
+  #01 Veracruz                  Day-of-Month: 24.00  Time-since-start:   0.00d  Travel-time:  5.20d
+  #02 FreeportTx                Day-of-Month: 27.89  Time-since-start:   3.89d  Travel-time:  1.31d
+  #03 Port Arthur               Day-of-Month: 29.20  Time-since-start:   5.20d  Travel-time:  0.00d
+  #04 Jacksonville              Day-of-Month:  3.40  Time-since-start:   9.40d  Travel-time: -4.20d
+  #05 CharlestonSC              Day-of-Month:  5.44  Time-since-start:  11.44d  Travel-time: -6.24d
+  #06 WilmingtonDe              Day-of-Month:  9.04  Time-since-start:  15.04d  Travel-time: -9.84d
+  #07 Sohar                     Day-of-Month: 11.68  Time-since-start:  47.68d  Travel-time: -42.48d
+  #08 Kuwait                    Day-of-Month: 14.01  Time-since-start:  50.01d  Travel-time: -44.82d
+  #09 Kuwait (Shuaiba)          Day-of-Month: 14.66  Time-since-start:  50.66d  Travel-time: -45.47d
+  #10 Dammam                    Day-of-Month: 16.22  Time-since-start:  52.22d  Travel-time: -47.02d
+  #11 Bahrain                   Day-of-Month: 18.32  Time-since-start:  54.32d  Travel-time: -49.13d
+  #12 Hamad Port                Day-of-Month: 19.72  Time-since-start:  55.72d  Travel-time: -50.53d
+  #13 Abu Dhabi                 Day-of-Month: 20.54  Time-since-start:  56.54d  Travel-time: -51.34d
+  #14 Jebel Ali                 Day-of-Month: 21.80  Time-since-start:  57.80d  Travel-time: -52.61d
+  Travel times verification:
+    SOURCE → Veracruz: alpha=0.000d, expected=0.000d ✓
+    Veracruz → FreeportTx: actual=3.888d, expected=3.888d ✓
+    FreeportTx → Port Arthur: actual=1.310d, expected=1.310d ✓
+    Port Arthur → Jacksonville: actual=4.199d, expected=4.199d ✓
+    Jacksonville → CharlestonSC: actual=2.038d, expected=2.038d ✓
+    CharlestonSC → WilmingtonDe: actual=3.606d, expected=3.606d ✓
+    WilmingtonDe → Sohar: actual=32.638d, expected=32.638d ✓
+    Sohar → Kuwait: actual=2.335d, expected=2.335d ✓
+    Kuwait → Kuwait (Shuaiba): actual=0.650d, expected=0.650d ✓
+    Kuwait (Shuaiba) → Dammam: actual=1.555d, expected=1.555d ✓
+    Dammam → Bahrain: actual=2.105d, expected=2.105d ✓
+    Bahrain → Hamad Port: actual=1.400d, expected=1.400d ✓
+    Hamad Port → Abu Dhabi: actual=0.813d, expected=0.813d ✓
+    Abu Dhabi → Jebel Ali: actual=1.267d, expected=1.267d ✓
+  Commitments served by this position:
+    - CharlestonSC -> Abu Dhabi (Transit: 45.10d)
+    - CharlestonSC -> Bahrain (Transit: 42.89d)
+    - CharlestonSC -> Kuwait (Shuaiba) (Transit: 39.23d)
+    - FreeportTx -> Abu Dhabi (Transit: 52.65d)
+    - FreeportTx -> Bahrain (Transit: 50.44d)
+    - FreeportTx -> Dammam (Transit: 48.33d)
+    - FreeportTx -> Hamad Port (Transit: 51.84d)
+    - FreeportTx -> Jebel Ali (Transit: 53.92d)
+    - FreeportTx -> Kuwait (Transit: 46.13d)
+    - FreeportTx -> Sohar (Transit: 43.79d)
+    - Jacksonville -> Abu Dhabi (Transit: 47.14d)
+    - Jacksonville -> Bahrain (Transit: 44.93d)
+    - Jacksonville -> Dammam (Transit: 42.82d)
+    - Jacksonville -> Hamad Port (Transit: 46.33d)
+    - Jacksonville -> Jebel Ali (Transit: 48.41d)
+    - Jacksonville -> Kuwait (Transit: 40.62d)
+    - Jacksonville -> Sohar (Transit: 38.28d)
+    - Port Arthur -> Abu Dhabi (Transit: 51.34d)
+    - Port Arthur -> Bahrain (Transit: 49.13d)
+    - Port Arthur -> Kuwait (Shuaiba) (Transit: 45.47d)
+    - Veracruz -> Abu Dhabi (Transit: 56.54d)
+    - Veracruz -> Bahrain (Transit: 54.32d)
+    - Veracruz -> Dammam (Transit: 52.22d)
+    - Veracruz -> Hamad Port (Transit: 55.72d)
+    - Veracruz -> Jebel Ali (Transit: 57.80d)
+    - Veracruz -> Kuwait (Transit: 50.01d)
+    - Veracruz -> Sohar (Transit: 47.68d)
+    - WilmingtonDe -> Abu Dhabi (Transit: 41.50d)
+    - WilmingtonDe -> Bahrain (Transit: 39.28d)
+    - WilmingtonDe -> Dammam (Transit: 37.18d)
+    - WilmingtonDe -> Hamad Port (Transit: 40.68d)
+    - WilmingtonDe -> Jebel Ali (Transit: 42.76d)
+    - WilmingtonDe -> Kuwait (Transit: 34.97d)
+    - WilmingtonDe -> Sohar (Transit: 32.64d)
+
+Position (1, 0) (lane USMEviaCape):
+  Start day: s=14
+  Duration: 54.777 days
+  Loading ports visited: 5
+  Discharging ports visited: 7
+  #01 Altamira                  Day-of-Month: 14.00  Time-since-start:   0.00d  Travel-time:  0.00d
+  #02 FreeportTx                Day-of-Month: 18.36  Time-since-start:   4.36d  Travel-time:  0.00d
+  #03 Jacksonville              Day-of-Month: 22.65  Time-since-start:   8.65d  Travel-time:  0.00d
+  #04 Brunswick                 Day-of-Month: 24.35  Time-since-start:  10.35d  Travel-time:  0.00d
+  #05 WilmingtonDe              Day-of-Month: 27.01  Time-since-start:  13.01d  Travel-time:  0.00d
+  #06 Sohar                     Day-of-Month: 29.65  Time-since-start:  45.65d  Travel-time:  0.00d
+  #07 Kuwait                    Day-of-Month:  1.98  Time-since-start:  47.98d  Travel-time:  0.00d
+  #08 Dammam                    Day-of-Month:  3.19  Time-since-start:  49.19d  Travel-time:  0.00d
+  #09 Bahrain                   Day-of-Month:  5.30  Time-since-start:  51.30d  Travel-time:  0.00d
+  #10 Hamad Port                Day-of-Month:  6.70  Time-since-start:  52.70d  Travel-time:  0.00d
+  #11 Abu Dhabi                 Day-of-Month:  7.51  Time-since-start:  53.51d  Travel-time:  0.00d
+  #12 Jebel Ali                 Day-of-Month:  8.78  Time-since-start:  54.78d  Travel-time:  0.00d
+  Travel times verification:
+    SOURCE → Altamira: alpha=0.000d, expected=0.000d ✓
+    Altamira → FreeportTx: actual=4.361d, expected=4.361d ✓
+    FreeportTx → Jacksonville: actual=4.288d, expected=4.288d ✓
+    Jacksonville → Brunswick: actual=1.704d, expected=1.704d ✓
+    Brunswick → WilmingtonDe: actual=2.655d, expected=2.655d ✓
+    WilmingtonDe → Sohar: actual=32.638d, expected=32.638d ✓
+    Sohar → Kuwait: actual=2.335d, expected=2.335d ✓
+    Kuwait → Dammam: actual=1.211d, expected=1.211d ✓
+    Dammam → Bahrain: actual=2.105d, expected=2.105d ✓
+    Bahrain → Hamad Port: actual=1.400d, expected=1.400d ✓
+    Hamad Port → Abu Dhabi: actual=0.813d, expected=0.813d ✓
+    Abu Dhabi → Jebel Ali: actual=1.267d, expected=1.267d ✓
+  Commitments served by this position:
+    - Altamira -> Abu Dhabi (Transit: 53.51d)
+    - Altamira -> Bahrain (Transit: 51.30d)
+    - Altamira -> Dammam (Transit: 49.19d)
+    - Altamira -> Hamad Port (Transit: 52.70d)
+    - Altamira -> Jebel Ali (Transit: 54.78d)
+    - Altamira -> Kuwait (Transit: 47.98d)
+    - Altamira -> Sohar (Transit: 45.65d)
+    - Brunswick -> Abu Dhabi (Transit: 43.16d)
+    - Brunswick -> Bahrain (Transit: 40.94d)
+    - Brunswick -> Dammam (Transit: 38.84d)
+    - Brunswick -> Hamad Port (Transit: 42.34d)
+    - Brunswick -> Jebel Ali (Transit: 44.42d)
+    - Brunswick -> Kuwait (Transit: 37.63d)
+    - Brunswick -> Sohar (Transit: 35.29d)
+    - FreeportTx -> Abu Dhabi (Transit: 49.15d)
+    - FreeportTx -> Bahrain (Transit: 46.94d)
+    - FreeportTx -> Dammam (Transit: 44.83d)
+    - FreeportTx -> Hamad Port (Transit: 48.34d)
+    - FreeportTx -> Jebel Ali (Transit: 50.42d)
+    - FreeportTx -> Kuwait (Transit: 43.62d)
+    - FreeportTx -> Sohar (Transit: 41.29d)
+    - Jacksonville -> Abu Dhabi (Transit: 44.86d)
+    - Jacksonville -> Bahrain (Transit: 42.65d)
+    - Jacksonville -> Dammam (Transit: 40.54d)
+    - Jacksonville -> Hamad Port (Transit: 44.05d)
+    - Jacksonville -> Jebel Ali (Transit: 46.13d)
+    - Jacksonville -> Kuwait (Transit: 39.33d)
+    - Jacksonville -> Sohar (Transit: 37.00d)
+    - WilmingtonDe -> Abu Dhabi (Transit: 40.50d)
+    - WilmingtonDe -> Bahrain (Transit: 38.29d)
+    - WilmingtonDe -> Dammam (Transit: 36.18d)
+    - WilmingtonDe -> Hamad Port (Transit: 39.69d)
+    - WilmingtonDe -> Jebel Ali (Transit: 41.77d)
+    - WilmingtonDe -> Kuwait (Transit: 34.97d)
+    - WilmingtonDe -> Sohar (Transit: 32.64d)
+
+============================================================
+CONSTRAINT COMPLIANCE REPORT
+============================================================
+
+C3 Start Spread Constraint:
+  Required minimum: 10 days
+    (1, 0): s=14
+    (0, 0): s=24
+  Actual minimum spread: 10.0 days
+  Status: OK
+
+C4 Port Spread Constraints:
+  All port spread constraints satisfied
+
+C5 Start Range (At Least One Position):
+  Target range: [20, 25]
+  Designated positions in range:
+    (0, 0): s=24 (OK)
+  Overall status: OK
+
+C8 Port Visit Windows (At Least One Position Per Port):
+  Brunswick: window=[24, 28]
+    (1, 0): phi=24.4 (DESIGNATED, OK)
+  Veracruz: window=[23, 28]
+    (0, 0): phi=24.0 (DESIGNATED, OK)
+  All port window constraints satisfied
+
+C11 Maximum Transit Time:
+  Altamira -> Abu Dhabi: max=70 days
+      (1, 0): 53.5 days (OK)
+  Altamira -> Bahrain: max=70 days
+      (1, 0): 51.3 days (OK)
+  Altamira -> Dammam: max=70 days
+      (1, 0): 49.2 days (OK)
+  Altamira -> Hamad Port: max=70 days
+      (1, 0): 52.7 days (OK)
+  Altamira -> Jebel Ali: max=70 days
+      (1, 0): 54.8 days (OK)
+  Altamira -> Kuwait: max=70 days
+      (1, 0): 48.0 days (OK)
+  Altamira -> Sohar: max=70 days
+      (1, 0): 45.6 days (OK)
+  Brunswick -> Abu Dhabi: max=70 days
+      (1, 0): 43.2 days (OK)
+  Brunswick -> Bahrain: max=70 days
+      (1, 0): 40.9 days (OK)
+  Brunswick -> Dammam: max=70 days
+      (1, 0): 38.8 days (OK)
+  Brunswick -> Hamad Port: max=70 days
+      (1, 0): 42.3 days (OK)
+  Brunswick -> Jebel Ali: max=70 days
+      (1, 0): 44.4 days (OK)
+  Brunswick -> Kuwait: max=70 days
+      (1, 0): 37.6 days (OK)
+  Brunswick -> Sohar: max=70 days
+      (1, 0): 35.3 days (OK)
+  CharlestonSC -> Abu Dhabi: max=70 days
+      (0, 0): 45.1 days (OK)
+  CharlestonSC -> Bahrain: max=70 days
+      (0, 0): 42.9 days (OK)
+  CharlestonSC -> Kuwait (Shuaiba): max=70 days
+      (0, 0): 39.2 days (OK)
+  FreeportTx -> Abu Dhabi: max=70 days
+      (0, 0): 52.6 days (OK)
+      (1, 0): 49.1 days (OK)
+  FreeportTx -> Bahrain: max=70 days
+      (0, 0): 50.4 days (OK)
+      (1, 0): 46.9 days (OK)
+  FreeportTx -> Dammam: max=70 days
+      (0, 0): 48.3 days (OK)
+      (1, 0): 44.8 days (OK)
+  FreeportTx -> Hamad Port: max=70 days
+      (0, 0): 51.8 days (OK)
+      (1, 0): 48.3 days (OK)
+  FreeportTx -> Jebel Ali: max=70 days
+      (0, 0): 53.9 days (OK)
+      (1, 0): 50.4 days (OK)
+  FreeportTx -> Kuwait: max=70 days
+      (0, 0): 46.1 days (OK)
+      (1, 0): 43.6 days (OK)
+  FreeportTx -> Sohar: max=70 days
+      (0, 0): 43.8 days (OK)
+      (1, 0): 41.3 days (OK)
+  Jacksonville -> Abu Dhabi: max=70 days
+      (0, 0): 47.1 days (OK)
+      (1, 0): 44.9 days (OK)
+  Jacksonville -> Bahrain: max=70 days
+      (0, 0): 44.9 days (OK)
+      (1, 0): 42.6 days (OK)
+  Jacksonville -> Dammam: max=70 days
+      (0, 0): 42.8 days (OK)
+      (1, 0): 40.5 days (OK)
+  Jacksonville -> Hamad Port: max=70 days
+      (0, 0): 46.3 days (OK)
+      (1, 0): 44.0 days (OK)
+  Jacksonville -> Jebel Ali: max=70 days
+      (0, 0): 48.4 days (OK)
+      (1, 0): 46.1 days (OK)
+  Jacksonville -> Kuwait: max=70 days
+      (0, 0): 40.6 days (OK)
+      (1, 0): 39.3 days (OK)
+  Jacksonville -> Sohar: max=70 days
+      (0, 0): 38.3 days (OK)
+      (1, 0): 37.0 days (OK)
+  Port Arthur -> Abu Dhabi: max=70 days
+      (0, 0): 51.3 days (OK)
+  Port Arthur -> Bahrain: max=70 days
+      (0, 0): 49.1 days (OK)
+  Port Arthur -> Kuwait (Shuaiba): max=70 days
+      (0, 0): 45.5 days (OK)
+  Veracruz -> Abu Dhabi: max=70 days
+      (0, 0): 56.5 days (OK)
+  Veracruz -> Bahrain: max=70 days
+      (0, 0): 54.3 days (OK)
+  Veracruz -> Dammam: max=70 days
+      (0, 0): 52.2 days (OK)
+  Veracruz -> Hamad Port: max=70 days
+      (0, 0): 55.7 days (OK)
+  Veracruz -> Jebel Ali: max=70 days
+      (0, 0): 57.8 days (OK)
+  Veracruz -> Kuwait: max=70 days
+      (0, 0): 50.0 days (OK)
+  Veracruz -> Sohar: max=70 days
+      (0, 0): 47.7 days (OK)
+  WilmingtonDe -> Abu Dhabi: max=70 days
+      (0, 0): 41.5 days (OK)
+      (1, 0): 40.5 days (OK)
+  WilmingtonDe -> Bahrain: max=70 days
+      (0, 0): 39.3 days (OK)
+      (1, 0): 38.3 days (OK)
+  WilmingtonDe -> Dammam: max=70 days
+      (0, 0): 37.2 days (OK)
+      (1, 0): 36.2 days (OK)
+  WilmingtonDe -> Hamad Port: max=70 days
+      (0, 0): 40.7 days (OK)
+      (1, 0): 39.7 days (OK)
+  WilmingtonDe -> Jebel Ali: max=70 days
+      (0, 0): 42.8 days (OK)
+      (1, 0): 41.8 days (OK)
+  WilmingtonDe -> Kuwait: max=70 days
+      (0, 0): 35.0 days (OK)
+      (1, 0): 35.0 days (OK)
+  WilmingtonDe -> Sohar: max=70 days
+      (0, 0): 32.6 days (OK)
+      (1, 0): 32.6 days (OK)
+  All transit time constraints satisfied
+
+======================================================================
+SUMMARY
+======================================================================
+Trades processed: 6
+Optimal solutions: 6
+Failed/Infeasible: 0
+
+  EUAF: 182.18 days
+
+  EUME: 91.27 days
+
+  FEEU: 156.68 days
+
+  FEUS: 161.60 days
+
+  MIAF: 104.62 days
+
+  USME: 112.58 days
+
+======================================================================
+CAPACITY ANALYSIS
+======================================================================
+Total combined duration of all routes: 808.93 days
+Estimated number of vessels needed (total_duration / 30): 26.96
+======================================================================
+
+======================================================================
+RUNTIME ANALYSIS
+======================================================================
+Trade      Runtime (s)    
+-------------------------
+EUAF                 0.05
+EUME                 0.02
+FEEU                 0.53
+FEUS                 5.46
+MIAF                 0.01
+USME                 0.03
+-------------------------
+TOTAL                6.10
+======================================================================
+
+Completed at: 2025-11-13 13:50:15
